@@ -9,10 +9,10 @@ from git import Repo
 
 env.user = os.environ['USER']
 env.home = os.environ['HOME']
-env.vim_root = '%(home)s/.vim'
-env.vim_autoload = '%(vim_root)s/autoload'
-env.vim_bundle = '%(vim_root)s/bundle'
-env.vim_syntax = '%(vim_root)s/syntax'
+env.vim_root = '%(home)s/.vim' % env
+env.vim_autoload = '%(vim_root)s/autoload' % env
+env.vim_bundle = '%(vim_root)s/bundle' % env
+env.vim_syntax = '%(vim_root)s/syntax' % env
 
 git_bundles = [
     'https://github.com/scrooloose/syntastic.git',
