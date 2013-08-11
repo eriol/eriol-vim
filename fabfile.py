@@ -97,9 +97,8 @@ def install_bundles():
 @task
 def install_scripts():
 
-    with lcd(env.vim_root):
-        for script in vim_org_scripts:
-            download_from_vim_org(script)
+    for script in vim_org_scripts:
+        download_from_vim_org(script)
 
 
 @task
