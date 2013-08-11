@@ -1,6 +1,9 @@
 " Eriol's .vimrc
 
 call pathogen#infect()
+" Manually install Powerline
+set rtp+=~/.vim/bundle/poweline/powerline/bindings/vim
+
 
 """""""""""
 " General "
