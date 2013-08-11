@@ -83,16 +83,15 @@ def install_pathogen():
 @task
 def install_bundles():
 
-    with lcd(env.vim_bundle):
-        for bundle in git_bundles:
-            destination = os.path.split(urlparse.urlparse(bundle).path)[-1]
-            if destination.endswith('.git'):
-                destination = destination[:-4]
+    for bundle in git_bundles:
+        destination = os.path.split(urlparse.urlparse(bundle).path)[-1]
+        if destination.endswith('.git'):
+            destination = destination[:-4]
 
-            Repo.clone_from(bundle, destination)
+        Repo.clone_from(bundle, os.path.join(env.vim_bundle, destination))
 
-        for bundle in vim_org_bundles:
-            download_from_vim_org(bundle)
+    for bundle in vim_org_bundles:
+        download_from_vim_org(bundle, prefix_path=env.vim_bundle)
 
 
 @task
