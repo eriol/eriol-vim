@@ -60,8 +60,11 @@ def download_from_vim_org(conf, prefix_path=''):
 @task
 def create_vimrc_link():
     """Create a symlink for vimrc"""
-    os.symlink('vimrc',
-               os.path.join('%(home)s' % env, '.vimrc'))
+    try:
+        os.symlink('vimrc',
+                   os.path.join('%(home)s' % env, '.vimrc'))
+    except OSError as e:
+        print 'Warning: %s' % e
 
 
 @task
@@ -97,6 +100,7 @@ def install_bundles():
 
     # Install Powerline using pip
     local('pip install --user git+git://github.com/Lokaltog/powerline')
+
 
 @task
 def install_scripts():
