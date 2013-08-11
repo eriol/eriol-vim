@@ -4,7 +4,7 @@ import urlparse
 import zipfile
 
 
-from fabric.api import env, task, local, cd
+from fabric.api import env, task, local, lcd
 from git import Repo
 
 env.user = os.environ['USER']
@@ -43,17 +43,18 @@ vim_org_scripts = [
 ]
 
 
-def download_from_vim_org(conf):
+def download_from_vim_org(conf, prefix_path=''):
     url = 'http://www.vim.org/scripts/download_script.php?src_id='
     destination, script_id, name = conf.split(';')
     url += script_id
+    destination = os.path.join(prefix_path, destination)
     local('mkdir -p %s' % destination)
-    with cd(destination):
-        urllib.urlretrieve(url, name)
-        if name.endswith('.zip'):
-            with zipfile.ZipFile(name) as myzip:
-                myzip.extractall()
-            os.remove(name)
+    destination_file = os.path.join(destination, name)
+    urllib.urlretrieve(url, destination_file)
+    if name.endswith('.zip'):
+        with zipfile.ZipFile(destination_file) as myzip:
+            myzip.extractall()
+        os.remove(destination_file)
 
 
 @task
@@ -66,7 +67,7 @@ def create_vimrc_link():
 @task
 def create_vim_layout_directories():
 
-    with cd(env.vim_root):
+    with lcd(env.vim_root):
         local('mkdir -p %(vim_autoload)s' % env)
         local('mkdir -p %(vim_bundle)s' % env)
         local('mkdir -p %(vim_syntax)s' % env)
@@ -82,7 +83,7 @@ def install_pathogen():
 @task
 def install_bundles():
 
-    with cd(env.vim_bundle):
+    with lcd(env.vim_bundle):
         for bundle in git_bundles:
             destination = os.path.split(urlparse.urlparse(bundle).path)[-1]
             if destination.endswith('.git'):
@@ -97,7 +98,7 @@ def install_bundles():
 @task
 def install_scripts():
 
-    with cd(env.vim_root):
+    with lcd(env.vim_root):
         for script in vim_org_scripts:
             download_from_vim_org(script)
 
