@@ -51,6 +51,7 @@ def download_from_vim_org(conf, prefix_path=''):
     local('mkdir -p %s' % destination)
     destination_file = os.path.join(destination, name)
     urllib.urlretrieve(url, destination_file)
+
     if name.endswith('.zip'):
         with zipfile.ZipFile(destination_file) as myzip:
             myzip.extractall()
@@ -88,6 +89,7 @@ def install_bundles():
         if destination.endswith('.git'):
             destination = destination[:-4]
 
+        print 'Cloning %s' % destination
         Repo.clone_from(bundle, os.path.join(env.vim_bundle, destination))
 
     for bundle in vim_org_bundles:
