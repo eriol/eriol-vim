@@ -93,6 +93,7 @@ def install_bundles():
         Repo.clone_from(bundle, os.path.join(env.vim_bundle, destination))
 
     for bundle in vim_org_bundles:
+        print 'Downloading %s' % bundle.split(';')[-1]
         download_from_vim_org(bundle, prefix_path=env.vim_bundle)
 
 
