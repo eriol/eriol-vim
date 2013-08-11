@@ -54,7 +54,7 @@ def download_from_vim_org(conf, prefix_path=''):
 
     if name.endswith('.zip'):
         with zipfile.ZipFile(destination_file) as myzip:
-            myzip.extractall()
+            myzip.extractall(destination)
         os.remove(destination_file)
 
 
