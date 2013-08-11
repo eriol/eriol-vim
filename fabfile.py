@@ -83,7 +83,7 @@ def install_pathogen():
 
 @task
 def install_bundles():
-
+    """Install bundles"""
     for bundle in git_bundles:
         destination = os.path.split(urlparse.urlparse(bundle).path)[-1]
         if destination.endswith('.git'):
