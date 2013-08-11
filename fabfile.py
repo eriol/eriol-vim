@@ -27,7 +27,6 @@ git_bundles = [
     'https://github.com/Raimondi/delimitMate.git',
     'https://github.com/godlygeek/tabular.git',
     'https://github.com/SirVer/ultisnips.git',
-    'https://github.com/Lokaltog/powerline.git',
     'https://github.com/tomasr/molokai.git',
 ]
 
@@ -96,6 +95,8 @@ def install_bundles():
         print 'Downloading %s' % bundle.split(';')[-1]
         download_from_vim_org(bundle, prefix_path=env.vim_bundle)
 
+    # Install Powerline using pip
+    local('pip install --user git+git://github.com/Lokaltog/powerline')
 
 @task
 def install_scripts():
