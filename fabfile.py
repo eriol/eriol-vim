@@ -76,9 +76,7 @@ def create_vim_layout_directories():
 def install_pathogen():
     """Intall pathogen.vim"""
     url = 'https://raw.github.com/tpope/vim-pathogen/master/autoload/pathogen.vim'
-
-    with cd(env.vim_autoload):
-        urllib.urlretrieve(url, 'pathogen.vim')
+    urllib.urlretrieve(url, os.path.join(env.vim_autoload, 'pathogen.vim'))
 
 
 @task
