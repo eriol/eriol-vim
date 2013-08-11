@@ -1,17 +1,13 @@
 " Eriol's .vimrc
 
-set nocompatible
-" Manually install Powerline
-set rtp+=~/.vim/bundle/poweline/powerline/bindings/vim
-
 call pathogen#infect()
-
 
 """""""""""
 " General "
 """""""""""
 
 set encoding=utf-8
+set nocompatible
 set history=100
 set hlsearch
 set ruler
