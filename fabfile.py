@@ -101,6 +101,7 @@ def install_bundles():
 def install_scripts():
 
     for script in vim_org_scripts:
+        print 'Downloading %s' % script.split(';')[-1]
         download_from_vim_org(script)
 
 
