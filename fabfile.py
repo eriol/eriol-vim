@@ -28,6 +28,7 @@ git_bundles = [
     'https://github.com/godlygeek/tabular.git',
     'https://github.com/SirVer/ultisnips.git',
     'https://github.com/tomasr/molokai.git',
+    'https://github.com/nathanaelkane/vim-indent-guides.git',
 ]
 
 vim_org_bundles = [
