@@ -62,7 +62,7 @@ def download_from_vim_org(conf, prefix_path=''):
 def create_vimrc_link():
     """Create a symlink for vimrc"""
     try:
-        os.symlink('vimrc',
+        os.symlink(os.path.join('%(vim_root)s' % env, 'vimrc'),
                    os.path.join('%(home)s' % env, '.vimrc'))
     except OSError as e:
         print 'Warning: %s' % e
