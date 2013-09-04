@@ -16,7 +16,7 @@ set showcmd
 set ff=unix
 colorscheme blackboard
 
-set guifont=DejaVu\ Sans\ Mono
+set guifont=DejaVu\ Sans\ Mono\ for\ Powerline
 " Disable scroolbars, menù and toolbar: must be enabled first to work :(
 set guioptions+=LlRrb
 set guioptions-=LlRrb
