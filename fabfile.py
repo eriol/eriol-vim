@@ -80,17 +80,23 @@ def create_vim_layout_directories():
 @task
 def install_pathogen():
     """Intall pathogen.vim"""
-    url = 'https://raw.github.com/tpope/vim-pathogen/master/autoload/pathogen.vim'
+    url = 'https://raw.github.com/tpope/vim-pathogen/master/autoload/pathogen.vim'  # noqa
     urllib.urlretrieve(url, os.path.join(env.vim_autoload, 'pathogen.vim'))
+
+
+def local_repository_for_bundle(bundle):
+    """Return local repository absolute path"""
+    destination = os.path.split(urlparse.urlparse(bundle).path)[-1]
+    if destination.endswith('.git'):
+        destination = destination[:-4]
+    return destination
 
 
 @task
 def install_bundles():
     """Install bundles"""
     for bundle in git_bundles:
-        destination = os.path.split(urlparse.urlparse(bundle).path)[-1]
-        if destination.endswith('.git'):
-            destination = destination[:-4]
+        destination = local_repository_for_bundle(bundle)
 
         print 'Cloning %s' % destination
         Repo.clone_from(bundle, os.path.join(env.vim_bundle, destination))
@@ -118,3 +124,15 @@ def fresh_install():
     install_bundles()
     install_scripts()
     create_vimrc_link()
+
+
+@task
+def update_bundles():
+    """Update bundles"""
+    for bundle in git_bundles:
+        destination = local_repository_for_bundle(bundle)
+        print 'Updating %s' % destination
+        r = Repo(os.path.join(env.vim_bundle, destination))
+        r.remotes.origin.pull()
+    # Upgrade Powerline using pip
+    local('pip install --user -U git+git://github.com/Lokaltog/powerline')
