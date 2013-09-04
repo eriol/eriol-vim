@@ -35,7 +35,7 @@ set softtabstop=4
 set backspace=indent,eol,start
 set wrap
 set showbreak=↪
-
+set cursorline
 if version >= 703
     set colorcolumn=80
 endif
