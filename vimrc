@@ -135,7 +135,7 @@ nnoremap <F5> :GundoToggle<CR>
 " BufExplorer "
 """""""""""""""
 
-map <C-j> <ESC>:BufExplorer<CR>
+map <A-j> <ESC>:BufExplorer<CR>
 
 """""""""""""
 " Powerline "
