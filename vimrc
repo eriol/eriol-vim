@@ -17,11 +17,7 @@ set ff=unix
 colorscheme blackboard
 
 set guifont=DejaVu\ Sans\ Mono\ for\ Powerline
-" Disable scroolbars, menù and toolbar: must be enabled first to work :(
-set guioptions+=LlRrb
-set guioptions-=LlRrb
-set guioptions-=m
-set guioptions-=T
+set guioptions=aegit
 nnoremap <T-F1> :if &go=~#'m'<Bar>set go-=m<Bar>else<Bar>set go+=m<Bar>endif<CR>
 
 """""""""""
