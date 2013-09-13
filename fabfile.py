@@ -17,20 +17,21 @@ env.vim_bundle = '%(vim_root)s/bundle' % env
 env.vim_syntax = '%(vim_root)s/syntax' % env
 
 git_bundles = [
-    'https://github.com/scrooloose/syntastic.git',
+    'https://github.com/Raimondi/delimitMate.git',
+    'https://github.com/SirVer/ultisnips.git',
+    'https://github.com/davidhalter/jedi-vim.git',
+    'https://github.com/godlygeek/tabular.git',
     'https://github.com/kien/ctrlp.vim.git',
+    'https://github.com/nathanaelkane/vim-indent-guides.git',
+    'https://github.com/scrooloose/syntastic.git',
+    'https://github.com/sjl/gundo.vim.git',
+    'https://github.com/tomasr/molokai.git',
+    'https://github.com/tomtom/tcomment_vim.git',
+    'https://github.com/tpope/vim-repeat.git',
     'https://github.com/tpope/vim-surround.git',
     'https://github.com/tpope/vim-unimpaired.git',
-    'https://github.com/tpope/vim-repeat.git',
-    'https://github.com/xolox/vim-session.git',
     'https://github.com/xolox/vim-misc.git',
-    'https://github.com/tomtom/tcomment_vim.git',
-    'https://github.com/sjl/gundo.vim.git',
-    'https://github.com/Raimondi/delimitMate.git',
-    'https://github.com/godlygeek/tabular.git',
-    'https://github.com/SirVer/ultisnips.git',
-    'https://github.com/tomasr/molokai.git',
-    'https://github.com/nathanaelkane/vim-indent-guides.git',
+    'https://github.com/xolox/vim-session.git',
 ]
 
 vim_org_bundles = [
