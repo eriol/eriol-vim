@@ -73,6 +73,7 @@ imap <silent> <PageDown> <C-O>1000<C-D>
 set nostartofline
 
 let python_highlight_all = 1
+set wildignore+=*.pyc
 augroup Python
   au!
   au FileType python set autoindent cindent et sts=4 sw=4 tw=80 fo=croq
