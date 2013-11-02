@@ -22,6 +22,7 @@ git_bundles = [
     'https://github.com/davidhalter/jedi-vim.git',
     'https://github.com/godlygeek/tabular.git',
     'https://github.com/kien/ctrlp.vim.git',
+    'https://github.com/moll/vim-bbye.git'
     'https://github.com/nathanaelkane/vim-indent-guides.git',
     'https://github.com/scrooloose/syntastic.git',
     'https://github.com/sjl/gundo.vim.git',
