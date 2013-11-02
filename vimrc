@@ -1,4 +1,7 @@
-" Eriol's .vimrc
+" Personal .vimrc file"
+" Daniele Tricoli <eriol@mornie.org>
+
+set nocompatible
 
 call pathogen#infect()
 
@@ -7,7 +10,6 @@ call pathogen#infect()
 """""""""""
 
 set encoding=utf-8
-set nocompatible
 set history=100
 set hlsearch
 set ruler
