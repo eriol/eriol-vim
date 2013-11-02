@@ -43,6 +43,9 @@ endif
 "set listchars=tab:»·,trail:·
 set listchars=tab:▸\ ,trail:·,eol:¬
 set list
+if version >= 702
+    autocmd BufWinLeave * call clearmatches()
+endif
 nnoremap <F9> :silent update<Bar>silent !xdg-open %:p &<CR>
 noremap <F10> :set list!<CR>
 noremap <F11> :set number!<CR>
