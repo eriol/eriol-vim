@@ -16,7 +16,7 @@ set ruler
 set showcmd
 " Use UNIX style newlines
 set ff=unix
-colorscheme blackboard
+colorscheme molokai
 
 set guifont=DejaVu\ Sans\ Mono\ for\ Powerline
 set guioptions=aegit
