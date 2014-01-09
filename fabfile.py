@@ -20,6 +20,7 @@ git_bundles = [
     'https://github.com/Raimondi/delimitMate.git',
     'https://github.com/SirVer/ultisnips.git',
     'https://github.com/davidhalter/jedi-vim.git',
+    'https://github.com/elzr/vim-json.git',
     'https://github.com/godlygeek/tabular.git',
     'https://github.com/kien/ctrlp.vim.git',
     'https://github.com/moll/vim-bbye.git'
