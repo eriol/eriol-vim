@@ -83,6 +83,9 @@ augroup Python
   au!
   au FileType python set autoindent cindent et sts=4 sw=4 tw=80 fo=croq
   "au FileType python set foldenable foldmethod=indent
+
+  " Disable docstring window auto popup for vim-jedi
+  autocmd FileType python setlocal completeopt-=preview
 augroup END
 
 autocmd BufRead,BufNewFile *.html set shiftwidth=2
