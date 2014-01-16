@@ -88,6 +88,7 @@ augroup Python
   autocmd FileType python setlocal completeopt-=preview
 augroup END
 
+au FileType rst set autoindent cindent et sts=3 sw=3 tw=80 fo=croq
 autocmd BufRead,BufNewFile *.html set shiftwidth=2
 
 " automatically refresh display of html on saving file
