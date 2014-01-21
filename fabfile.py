@@ -138,8 +138,12 @@ def update_bundles():
     """Update bundles"""
     for bundle in git_bundles:
         destination = local_repository_for_bundle(bundle)
+        repository_path = os.path.join(env.vim_bundle, destination)
+        # If the bundle is disabled skip it!
+        if os.path.exists(repository_path + '~'):
+            continue
         print 'Updating %s' % destination
-        r = Repo(os.path.join(env.vim_bundle, destination))
+        r = Repo(repository_path)
         r.remotes.origin.pull()
     # Upgrade Powerline using pip
     local('pip install --user -U git+git://github.com/Lokaltog/powerline')
