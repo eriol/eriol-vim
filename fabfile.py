@@ -34,6 +34,7 @@ git_bundles = [
     'https://github.com/tpope/vim-repeat.git',
     'https://github.com/tpope/vim-surround.git',
     'https://github.com/tpope/vim-unimpaired.git',
+    'https://github.com/vim-scripts/TaskList.vim.git'
     'https://github.com/xolox/vim-misc.git',
     'https://github.com/xolox/vim-session.git',
 ]
