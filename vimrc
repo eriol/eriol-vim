@@ -120,6 +120,8 @@ nmap <silent> <leader>ml :Repl file:///%:p<CR>
 nmap <silent> <leader>md :Repl http://localhost/
 " mnemonic is MozRepl Development
 
+" Don't create netrw history file
+let g:netrw_dirhistmax=0
 
 """""""""""""
 " Syntastic "
