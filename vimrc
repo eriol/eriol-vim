@@ -132,6 +132,9 @@ let g:syntastic_warning_symbol='⚠⚠'
 let g:syntastic_style_error_symbol='✗✗'
 let g:syntastic_style_warning_symbol='⚠⚠'
 let g:syntastic_python_checkers=['python', 'flake8']
+" Use C++11 as default: add a .syntastic_cpp_config for projects
+" not using C++11
+let g:syntastic_cpp_compiler_options = ' -std=c++11'
 
 """""""""
 " Gundo "
