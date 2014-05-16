@@ -64,7 +64,7 @@ filetype plugin indent on
 " Tab
 nmap <A-n> :tabnew<CR>
 " gz in command mode closes the current buffer
-map gz :bdelete<CR>
+map gz :Bdelete<CR>
 
 " fix broken Page Up/Down
 " http://vimrc-dissection.blogspot.com/2009/02/fixing-pageup-and-pagedown.html
