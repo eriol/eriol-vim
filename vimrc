@@ -138,6 +138,12 @@ let g:syntastic_cpp_compiler_options = ' -std=c++11'
 
 nnoremap <F5> :GundoToggle<CR>
 
+""""""""""""
+" jedi-vim "
+""""""""""""
+
+let g:jedi#show_call_signatures = 0
+
 """""""""""""""
 " BufExplorer "
 """""""""""""""
