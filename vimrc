@@ -66,10 +66,6 @@ nmap <A-n> :tabnew<CR>
 " gz in command mode closes the current buffer
 map gz :bdelete<CR>
 
-" g[bB] in command mode switch to the next/prev. buffer
-map gb :bnext<CR>
-map gB :bprev<CR>
-
 " fix broken Page Up/Down
 " http://vimrc-dissection.blogspot.com/2009/02/fixing-pageup-and-pagedown.html
 map <silent> <PageUp> 1000<C-U>
