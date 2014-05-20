@@ -48,7 +48,7 @@ vim_org_bundles = [
 vim_org_scripts = [
     # destination;script id;file name
     'syntax;17736;django.vim',
-    'syntax;20632;python.vim',
+    'syntax;21056;python.vim',
 ]
 
 
