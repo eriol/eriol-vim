@@ -7,7 +7,6 @@ import zipfile
 
 
 from fabric.api import env, task, local, lcd
-from git import Repo
 
 env.user = os.environ['USER']
 env.home = os.environ['HOME']
@@ -15,30 +14,6 @@ env.vim_root = '%(home)s/.vim' % env
 env.vim_autoload = '%(vim_root)s/autoload' % env
 env.vim_bundle = '%(vim_root)s/bundle' % env
 env.vim_syntax = '%(vim_root)s/syntax' % env
-
-git_bundles = [
-    'https://github.com/Raimondi/delimitMate.git',
-    'https://github.com/SirVer/ultisnips.git',
-    'https://github.com/davidhalter/jedi-vim.git',
-    'https://github.com/elzr/vim-json.git',
-    'https://github.com/ervandew/supertab.git'
-    'https://github.com/fatih/vim-go',
-    'https://github.com/godlygeek/tabular.git',
-    'https://github.com/jmcantrell/vim-virtualenv.git',
-    'https://github.com/kien/ctrlp.vim.git',
-    'https://github.com/moll/vim-bbye.git'
-    'https://github.com/nathanaelkane/vim-indent-guides.git',
-    'https://github.com/scrooloose/syntastic.git',
-    'https://github.com/sjl/gundo.vim.git',
-    'https://github.com/tomasr/molokai.git',
-    'https://github.com/tomtom/tcomment_vim.git',
-    'https://github.com/tpope/vim-repeat.git',
-    'https://github.com/tpope/vim-surround.git',
-    'https://github.com/tpope/vim-unimpaired.git',
-    'https://github.com/vim-scripts/TaskList.vim.git'
-    'https://github.com/xolox/vim-misc.git',
-    'https://github.com/xolox/vim-session.git',
-]
 
 vim_org_bundles = [
     # destination;script id;file name
@@ -93,22 +68,11 @@ def install_pathogen():
     urllib.urlretrieve(url, os.path.join(env.vim_autoload, 'pathogen.vim'))
 
 
-def local_repository_for_bundle(bundle):
-    """Return local repository absolute path"""
-    destination = os.path.split(urlparse.urlparse(bundle).path)[-1]
-    if destination.endswith('.git'):
-        destination = destination[:-4]
-    return destination
-
-
 @task
 def install_bundles():
     """Install bundles"""
-    for bundle in git_bundles:
-        destination = local_repository_for_bundle(bundle)
 
-        print 'Cloning %s' % destination
-        Repo.clone_from(bundle, os.path.join(env.vim_bundle, destination))
+    local('vopher -f vopher.list -dir %(vim_bundle) up' % env)
 
     for bundle in vim_org_bundles:
         print 'Downloading %s' % bundle.split(';')[-1]
@@ -138,14 +102,7 @@ def fresh_install():
 @task
 def update_bundles():
     """Update bundles"""
-    for bundle in git_bundles:
-        destination = local_repository_for_bundle(bundle)
-        repository_path = os.path.join(env.vim_bundle, destination)
-        # If the bundle is disabled skip it!
-        if os.path.exists(repository_path + '~'):
-            continue
-        print 'Updating %s' % destination
-        r = Repo(repository_path)
-        r.remotes.origin.pull()
+
+    local('vopher -f vopher.list -force -dir %(vim_bundle) up' % env)
     # Upgrade Powerline using pip
     local('pip install --user -U git+git://github.com/Lokaltog/powerline')
