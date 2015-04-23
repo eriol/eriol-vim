@@ -1,0 +1,4 @@
+autoload/
+bundle/
+syntax/
+*.pyc
