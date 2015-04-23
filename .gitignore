@@ -1,4 +1,5 @@
 autoload/
 bundle/
+sessions/
 syntax/
 *.pyc
