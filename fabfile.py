@@ -72,7 +72,7 @@ def install_pathogen():
 def install_bundles():
     """Install bundles"""
 
-    local('vopher -f vopher.list -dir %(vim_bundle) up' % env)
+    local('vopher -f vopher.list -dir %(vim_bundle)s up' % env)
 
     for bundle in vim_org_bundles:
         print 'Downloading %s' % bundle.split(';')[-1]
@@ -103,6 +103,6 @@ def fresh_install():
 def update_bundles():
     """Update bundles"""
 
-    local('vopher -f vopher.list -force -dir %(vim_bundle) up' % env)
+    local('vopher -f vopher.list -force -dir %(vim_bundle)s up' % env)
     # Upgrade Powerline using pip
     local('pip install --user -U git+git://github.com/Lokaltog/powerline')
