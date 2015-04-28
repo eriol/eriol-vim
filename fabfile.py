@@ -17,7 +17,6 @@ env.vim_syntax = '%(vim_root)s/syntax' % env
 
 vim_org_bundles = [
     # destination;script id;file name
-    'bufexplorer;20031;bufexplorer-7.3.6.zip',
 ]
 
 vim_org_scripts = [
