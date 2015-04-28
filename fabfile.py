@@ -2,7 +2,6 @@
 
 import os
 import urllib
-import urlparse
 import zipfile
 
 
