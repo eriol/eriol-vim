@@ -44,7 +44,7 @@ if exists('+autochdir')
 endif
 
 "set listchars=tab:»·,trail:·
-set listchars=tab:▸\ ,trail:·,eol:¬
+set listchars=tab:▸\ ,trail:·,eol:¬,nbsp:␣
 set list
 if version >= 702
     autocmd BufWinLeave * call clearmatches()
