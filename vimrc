@@ -18,7 +18,7 @@ set showcmd
 set ff=unix
 colorscheme molokai
 
-set guifont=DejaVu\ Sans\ Mono\ for\ Powerline
+set guifont=Hack
 set guioptions=aegit
 nnoremap <T-F1> :if &go=~#'m'<Bar>set go-=m<Bar>else<Bar>set go+=m<Bar>endif<CR>
 " Resize splits on windows size changes
