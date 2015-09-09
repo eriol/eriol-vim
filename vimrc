@@ -181,7 +181,6 @@ let g:indent_guides_guide_size=1
 
 let g:go_disable_autoinstall = 1
 let g:go_fmt_command = "goimports"
-let g:syntastic_go_go_build_args = ""
 
 """""""""""""
 " NERD Tree "
