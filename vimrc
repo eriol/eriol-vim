@@ -151,16 +151,11 @@ let g:jedi#show_call_signatures = 0
 
 map <A-j> <ESC>:BufExplorer<CR>
 
-"""""""""""""
-" Powerline "
-"""""""""""""
-
-if has("gui_running")
-    python from powerline.vim import setup as powerline_setup
-    python powerline_setup()
-    python del powerline_setup
-    set laststatus=2
-endif
+"""""""""""""""
+" vim-airline "
+"""""""""""""""
+set laststatus=2
+let g:airline_powerline_fonts = 1
 
 """""""""""
 " Session "

@@ -76,9 +76,6 @@ def install_bundles():
         print 'Downloading %s' % bundle.split(';')[-1]
         download_from_vim_org(bundle, prefix_path=env.vim_bundle)
 
-    # Install Powerline using pip
-    local('pip install --user git+git://github.com/Lokaltog/powerline')
-
 
 @task
 def install_scripts():
@@ -102,5 +99,3 @@ def update_bundles():
     """Update bundles"""
 
     local('vopher -f vopher.list -force -dir %(vim_bundle)s up' % env)
-    # Upgrade Powerline using pip
-    local('pip install --user -U git+git://github.com/Lokaltog/powerline')
