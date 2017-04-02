@@ -5,19 +5,18 @@ set nocompatible
 
 call plug#begin('~/.vim/plugged')
 
+Plug 'sheerun/vim-polyglot'
+
 Plug 'Raimondi/delimitMate'
 Plug 'SirVer/ultisnips'
 Plug 'ctrlpvim/ctrlp.vim'
 Plug 'davidhalter/jedi-vim'
-" Plug 'elzr/vim-json'
 Plug 'ervandew/supertab'
-Plug 'fatih/vim-go'
 Plug 'godlygeek/tabular'
 Plug 'jlanzarotta/bufexplorer'
 Plug 'jmcantrell/vim-virtualenv'
 Plug 'moll/vim-bbye'
 Plug 'nathanaelkane/vim-indent-guides'
-Plug 'rust-lang/rust.vim'
 Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' }
 Plug 'scrooloose/syntastic'
 Plug 'sjl/gundo.vim'
