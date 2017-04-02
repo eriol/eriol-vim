@@ -35,37 +35,36 @@ Plug 'xolox/vim-session'
 
 call plug#end()
 
-"""""""""""
-" General "
-"""""""""""
-
-set encoding=utf-8
-set history=100
-set hlsearch
-set ruler
-set showcmd
-set ff=unix
-set noerrorbells
-set visualbell
 
 colorscheme molokai
 
+set autoindent
+set autoread
+set backspace=indent,eol,start
+set encoding=utf-8
+set expandtab
+set ff=unix
 set guifont=Hack
 set guioptions=aegit
-nnoremap <T-F1> :if &go=~#'m'<Bar>set go-=m<Bar>else<Bar>set go+=m<Bar>endif<CR>
+set history=1000
+set incsearch hlsearch
+set laststatus=2
+set list
+set listchars=tab:▸\ ,trail:·,eol:¬,nbsp:␣
+set noerrorbells
+set nostartofline
+set ruler
+set shiftwidth=4
+set shortmess+=I
+set showbreak=↪
+set showcmd
+set softtabstop=4
+set tabstop=4
+set visualbell
+set wrap
+
 " Resize splits on windows size changes
 au VimResized * exe "normal! \<c-w>="
-"""""""""""
-" Editing "
-"""""""""""
-
-set expandtab
-set tabstop=4
-set shiftwidth=4
-set softtabstop=4
-set backspace=indent,eol,start
-set wrap
-set showbreak=↪
 
 if version >= 703
     set colorcolumn=80
@@ -75,19 +74,16 @@ if exists('+autochdir')
     set autochdir
 endif
 
-"set listchars=tab:»·,trail:·
-set listchars=tab:▸\ ,trail:·,eol:¬,nbsp:␣
-set list
 if version >= 702
     autocmd BufWinLeave * call clearmatches()
 endif
-nnoremap <F9> :silent update<Bar>silent !xdg-open %:p &<CR>
-noremap <F10> :set list!<CR>
-noremap <F11> :set number!<CR>
 
-syntax on
-filetype on
-filetype plugin indent on
+if has('autocmd')
+  filetype plugin indent on
+endif
+if has('syntax')
+  syntax enable
+endif
 
 """"""""""""""""""
 " Keybindings    "
@@ -97,14 +93,20 @@ filetype plugin indent on
 nmap <A-n> :tabnew<CR>
 " gz in command mode closes the current buffer
 map gz :Bdelete<CR>
-
+" `Ctrl-L` to clear the highlighting
+nnoremap <silent> <C-L> :nohlsearch<CR><C-L>
 " fix broken Page Up/Down
 " http://vimrc-dissection.blogspot.com/2009/02/fixing-pageup-and-pagedown.html
 map <silent> <PageUp> 1000<C-U>
 map <silent> <PageDown> 1000<C-D>
 imap <silent> <PageUp> <C-O>1000<C-U>
 imap <silent> <PageDown> <C-O>1000<C-D>
-set nostartofline
+nnoremap <C-w>s <C-w>s<C-w>w
+nnoremap <C-w>v <C-w>v<C-w>w
+nnoremap <F9> :silent update<Bar>silent !xdg-open %:p &<CR>
+noremap <F10> :set list!<CR>
+noremap <F11> :set number!<CR>
+nnoremap <T-F1> :if &go=~#'m'<Bar>set go-=m<Bar>else<Bar>set go+=m<Bar>endif<CR>
 
 let python_highlight_all = 1
 set wildignore+=*.pyc
@@ -186,7 +188,6 @@ map <A-j> <ESC>:BufExplorer<CR>
 """""""""""""""
 " vim-airline "
 """""""""""""""
-set laststatus=2
 let g:airline_powerline_fonts = 1
 
 """""""""""
