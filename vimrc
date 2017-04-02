@@ -3,7 +3,37 @@
 
 set nocompatible
 
-call pathogen#infect()
+call plug#begin('~/.vim/plugged')
+
+Plug 'Raimondi/delimitMate'
+Plug 'SirVer/ultisnips'
+Plug 'ctrlpvim/ctrlp.vim'
+Plug 'davidhalter/jedi-vim'
+" Plug 'elzr/vim-json'
+Plug 'ervandew/supertab'
+Plug 'fatih/vim-go'
+Plug 'godlygeek/tabular'
+Plug 'jlanzarotta/bufexplorer'
+Plug 'jmcantrell/vim-virtualenv'
+Plug 'moll/vim-bbye'
+Plug 'nathanaelkane/vim-indent-guides'
+Plug 'rust-lang/rust.vim'
+Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' }
+Plug 'scrooloose/syntastic'
+Plug 'sjl/gundo.vim'
+Plug 'tomasr/molokai'
+Plug 'tomtom/tcomment_vim'
+Plug 'tpope/vim-fugitive'
+Plug 'tpope/vim-repeat'
+Plug 'tpope/vim-surround'
+Plug 'tpope/vim-unimpaired'
+Plug 'vim-airline/vim-airline'
+Plug 'vim-airline/vim-airline-themes'
+Plug 'vim-scripts/TaskList.vim'
+Plug 'xolox/vim-misc'
+Plug 'xolox/vim-session'
+
+call plug#end()
 
 """""""""""
 " General "

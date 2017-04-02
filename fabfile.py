@@ -11,7 +11,7 @@ env.user = os.environ['USER']
 env.home = os.environ['HOME']
 env.vim_root = '%(home)s/.vim' % env
 env.vim_autoload = '%(vim_root)s/autoload' % env
-env.vim_bundle = '%(vim_root)s/bundle' % env
+env.vim_plugged = '%(vim_root)s/plugged' % env
 env.vim_syntax = '%(vim_root)s/syntax' % env
 
 vim_org_bundles = [
@@ -54,26 +54,15 @@ def create_vim_layout_directories():
 
     with lcd(env.vim_root):
         local('mkdir -p %(vim_autoload)s' % env)
-        local('mkdir -p %(vim_bundle)s' % env)
+        local('mkdir -p %(vim_plugged)s' % env)
         local('mkdir -p %(vim_syntax)s' % env)
 
 
 @task
-def install_pathogen():
-    """Intall pathogen.vim"""
-    url = 'https://raw.github.com/tpope/vim-pathogen/master/autoload/pathogen.vim'  # noqa
-    urllib.urlretrieve(url, os.path.join(env.vim_autoload, 'pathogen.vim'))
-
-
-@task
-def install_bundles():
-    """Install bundles"""
-
-    local('vopher -f vopher.list -dir %(vim_bundle)s up' % env)
-
-    for bundle in vim_org_bundles:
-        print 'Downloading %s' % bundle.split(';')[-1]
-        download_from_vim_org(bundle, prefix_path=env.vim_bundle)
+def install_vim_plug():
+    """Intall plug.vim"""
+    url = 'https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim'
+    urllib.urlretrieve(url, os.path.join(env.vim_autoload, 'plug.vim'))
 
 
 @task
@@ -87,14 +76,5 @@ def install_scripts():
 @task
 def fresh_install():
     create_vim_layout_directories()
-    install_pathogen()
-    install_bundles()
-    install_scripts()
-    create_vimrc_link()
-
-
-@task
-def update_bundles():
-    """Update bundles"""
-
-    local('vopher -f vopher.list -force -dir %(vim_bundle)s up' % env)
+    install_vim_plug()
+    # install_scripts()
