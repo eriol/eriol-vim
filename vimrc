@@ -44,8 +44,10 @@ set history=100
 set hlsearch
 set ruler
 set showcmd
-" Use UNIX style newlines
 set ff=unix
+set noerrorbells
+set visualbell
+
 colorscheme molokai
 
 set guifont=Hack
