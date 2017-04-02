@@ -59,7 +59,7 @@ set showbreak=↪
 set showcmd
 set softtabstop=4
 set tabstop=4
-set visualbell
+set visualbell t_vb=
 set wrap
 
 " Resize splits on windows size changes
