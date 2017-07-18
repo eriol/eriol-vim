@@ -194,6 +194,7 @@ let g:airline_powerline_fonts = 1
 " Session "
 """""""""""
 
+let g:session_autoload = 'no'
 let g:session_autosave='yes'
 
 """""""""""""""""
