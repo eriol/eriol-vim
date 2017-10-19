@@ -19,7 +19,6 @@ Plug 'jmcantrell/vim-virtualenv'
 Plug 'moll/vim-bbye'
 Plug 'nathanaelkane/vim-indent-guides'
 Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' }
-Plug 'scrooloose/syntastic'
 Plug 'sjl/gundo.vim'
 Plug 'tomasr/molokai'
 Plug 'tomtom/tcomment_vim'
@@ -30,6 +29,7 @@ Plug 'tpope/vim-unimpaired'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'vim-scripts/TaskList.vim'
+Plug 'w0rp/ale'
 Plug 'xolox/vim-misc'
 Plug 'xolox/vim-session'
 
@@ -154,18 +154,11 @@ nmap <silent> <leader>md :Repl http://localhost/
 " Don't create netrw history file
 let g:netrw_dirhistmax=0
 
-"""""""""""""
-" Syntastic "
-"""""""""""""
-let g:syntastic_error_symbol='✗'
-let g:syntastic_warning_symbol='⚠'
-let g:syntastic_style_error_symbol = '⚡'
-let g:syntastic_style_warning_symbol = '⚡'
-let g:syntastic_python_checkers=['python', 'flake8']
-" Use C++11 as default: add a .syntastic_cpp_config for projects
-" not using C++11
-let g:syntastic_cpp_compiler_options = ' -std=c++11'
-let g:syntastic_go_checkers = ['go', 'golint', 'govet', 'errcheck']
+"""""""""
+" A.L.E "
+"""""""""
+let g:ale_sign_error = '✗'
+let g:ale_sign_warning = '⚡'
 
 """""""""
 " Gundo "
@@ -188,6 +181,7 @@ map <A-j> <ESC>:BufExplorer<CR>
 """""""""""""""
 " vim-airline "
 """""""""""""""
+let g:airline#extensions#ale#enabled = 1
 let g:airline_powerline_fonts = 1
 
 """""""""""
