@@ -9,6 +9,7 @@ Plug 'sheerun/vim-polyglot'
 
 Plug 'Raimondi/delimitMate'
 Plug 'SirVer/ultisnips'
+Plug 'airblade/vim-gitgutter'
 Plug 'ctrlpvim/ctrlp.vim'
 Plug 'davidhalter/jedi-vim'
 Plug 'ervandew/supertab'
