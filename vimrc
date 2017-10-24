@@ -160,6 +160,18 @@ let g:netrw_dirhistmax=0
 """""""""
 let g:ale_sign_error = '✗'
 let g:ale_sign_warning = '⚡'
+let g:ale_linters = {'go': ['gometalinter']}
+let g:ale_go_gometalinter_options = '
+  \ --aggregate
+  \ --aggregate
+  \ --disable=gas
+  \ --disable=goconst
+  \ --disable=gocyclo
+  \ --fast
+  \ --sort=line
+  \ --vendor
+  \ --vendored-linters
+\ '¬
 nmap <silent> <C-k> <Plug>(ale_previous_wrap)
 nmap <silent> <C-j> <Plug>(ale_next_wrap)
 
