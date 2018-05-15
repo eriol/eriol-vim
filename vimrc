@@ -59,8 +59,10 @@ call plug#end()
 
 colorscheme molokai
 
+set autochdir
 set autoindent
 set autoread
+set colorcolumn=80
 set backspace=indent,eol,start
 set encoding=utf-8
 set expandtab
@@ -86,14 +88,6 @@ set wrap
 
 " Resize splits on windows size changes
 au VimResized * exe "normal! \<c-w>="
-
-if version >= 703
-    set colorcolumn=80
-endif
-
-if exists('+autochdir')
-    set autochdir
-endif
 
 if version >= 702
     autocmd BufWinLeave * call clearmatches()
