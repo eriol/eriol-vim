@@ -1,4 +1,4 @@
-" Personal .vimrc file"
+" Personal .vimrc file
 " Daniele Tricoli <eriol@mornie.org>
 
 call plug#begin('~/.vim/plugged')
@@ -10,16 +10,35 @@ Plug 'SirVer/ultisnips'
 Plug 'airblade/vim-gitgutter'
 Plug 'ctrlpvim/ctrlp.vim'
 Plug 'davidhalter/jedi-vim'
+    let g:jedi#show_call_signatures = 0
 Plug 'ervandew/supertab'
 Plug 'fatih/vim-go'
+    let g:go_disable_autoinstall = 1
+    let g:go_fmt_command = "goimports"
 Plug 'godlygeek/tabular'
 Plug 'jlanzarotta/bufexplorer'
+    map <A-j> <ESC>:BufExplorer<CR>
 Plug 'jmcantrell/vim-virtualenv'
 Plug 'moll/vim-bbye'
 Plug 'nathanaelkane/vim-indent-guides'
+    let g:indent_guides_enable_on_vim_startup = 1
+    let g:indent_guides_start_level = 2
+    let g:indent_guides_guide_size = 1
 Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' }
+    map <C-n> :NERDTreeToggle<CR>
+    let NERDTreeIgnore = ['\.pyc$']
 Plug 'scrooloose/syntastic'
+    let g:syntastic_error_symbol = '✗'
+    let g:syntastic_warning_symbol = '⚠'
+    let g:syntastic_style_error_symbol = '⚡'
+    let g:syntastic_style_warning_symbol = '⚡'
+    let g:syntastic_python_checkers = ['python', 'flake8']
+    " Use C++11 as default: add a .syntastic_cpp_config for projects
+    " not using C++11
+    let g:syntastic_cpp_compiler_options = ' -std=c++11'
+    let g:syntastic_go_checkers = ['go', 'golint', 'govet', 'errcheck']
 Plug 'sjl/gundo.vim'
+    nnoremap <F5> :GundoToggle<CR>
 Plug 'tomasr/molokai'
 Plug 'tomtom/tcomment_vim'
 Plug 'tpope/vim-fugitive'
@@ -27,9 +46,12 @@ Plug 'tpope/vim-repeat'
 Plug 'tpope/vim-surround'
 Plug 'tpope/vim-unimpaired'
 Plug 'vim-airline/vim-airline'
+    let g:airline_powerline_fonts = 1
 Plug 'vim-airline/vim-airline-themes'
 Plug 'xolox/vim-misc'
 Plug 'xolox/vim-session'
+    let g:session_autoload = 'no'
+    let g:session_autosave='yes'
 
 call plug#end()
 
@@ -115,66 +137,3 @@ autocmd BufRead,BufNewFile *.html set shiftwidth=2
 
 " Don't create netrw history file
 let g:netrw_dirhistmax=0
-
-" Syntastic
-let g:syntastic_error_symbol='✗'
-let g:syntastic_warning_symbol='⚠'
-let g:syntastic_style_error_symbol = '⚡'
-let g:syntastic_style_warning_symbol = '⚡'
-let g:syntastic_python_checkers=['python', 'flake8']
-" Use C++11 as default: add a .syntastic_cpp_config for projects
-" not using C++11
-let g:syntastic_cpp_compiler_options = ' -std=c++11'
-let g:syntastic_go_checkers = ['go', 'golint', 'govet', 'errcheck']
-
-"""""""""
-" Gundo "
-"""""""""
-
-nnoremap <F5> :GundoToggle<CR>
-
-""""""""""""
-" jedi-vim "
-""""""""""""
-
-let g:jedi#show_call_signatures = 0
-
-"""""""""""""""
-" BufExplorer "
-"""""""""""""""
-
-map <A-j> <ESC>:BufExplorer<CR>
-
-"""""""""""""""
-" vim-airline "
-"""""""""""""""
-let g:airline_powerline_fonts = 1
-
-"""""""""""
-" Session "
-"""""""""""
-
-let g:session_autoload = 'no'
-let g:session_autosave='yes'
-
-"""""""""""""""""
-" Indent Guides "
-"""""""""""""""""
-
-let g:indent_guides_enable_on_vim_startup=1
-let g:indent_guides_start_level=2
-let g:indent_guides_guide_size=1
-
-""""""""""
-" vim-go "
-""""""""""
-
-let g:go_disable_autoinstall = 1
-let g:go_fmt_command = "goimports"
-
-"""""""""""""
-" NERD Tree "
-"""""""""""""
-
-map <C-n> :NERDTreeToggle<CR>
-let NERDTreeIgnore = ['\.pyc$']
