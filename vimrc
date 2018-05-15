@@ -77,13 +77,6 @@ if version >= 702
     autocmd BufWinLeave * call clearmatches()
 endif
 
-if has('autocmd')
-  filetype plugin indent on
-endif
-if has('syntax')
-  syntax enable
-endif
-
 """"""""""""""""""
 " Keybindings    "
 """"""""""""""""""
