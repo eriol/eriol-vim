@@ -19,6 +19,9 @@ Plug 'godlygeek/tabular'
 Plug 'jlanzarotta/bufexplorer'
     map <A-j> <ESC>:BufExplorer<CR>
 Plug 'jmcantrell/vim-virtualenv'
+Plug 'ludovicchabant/vim-gutentags'
+    let g:gutentags_project_root = ['Makefile']
+    let g:gutentags_cache_dir = "~/.cache/ctags"
 Plug 'moll/vim-bbye'
 Plug 'nathanaelkane/vim-indent-guides'
     let g:indent_guides_enable_on_vim_startup = 1
