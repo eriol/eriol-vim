@@ -39,6 +39,7 @@ Plug 'scrooloose/syntastic'
     let g:syntastic_go_checkers = ['go', 'golint', 'govet', 'errcheck']
 Plug 'sjl/gundo.vim'
     nnoremap <F5> :GundoToggle<CR>
+    let g:gundo_prefer_python3 = 1
 Plug 'tomasr/molokai'
 Plug 'tomtom/tcomment_vim'
 Plug 'tpope/vim-fugitive'
