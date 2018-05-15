@@ -121,35 +121,6 @@ augroup END
 au FileType rst set autoindent cindent et sts=3 sw=3 tw=80 fo=croq
 autocmd BufRead,BufNewFile *.html set shiftwidth=2
 
-" automatically refresh display of html on saving file
-" http://vim.wikia.com/wiki/VimTip1656
-autocmd BufWriteCmd *.html,*.css,*.gtpl :call Refresh_firefox()
-function! Refresh_firefox()
-  if &modified
-    write
-    silent !echo  'vimYo = content.window.pageYOffset;
-          \ vimXo = content.window.pageXOffset;
-          \ BrowserReload();
-          \ content.window.scrollTo(vimXo,vimYo);
-          \ repl.quit();'  |
-          \ nc -w 1 localhost 4242 2>&1 > /dev/null
-  endif
-endfunction
-
-command! -nargs=1 Repl silent !echo
-      \ "repl.home();
-      \ content.location.href = '<args>';
-      \ repl.enter(content);
-      \ repl.quit();" |
-      \ nc localhost 4242
-
-nmap <leader>mh :Repl http://
-" mnemonic is MozRepl Http
-nmap <silent> <leader>ml :Repl file:///%:p<CR>
-" mnemonic is MozRepl Local
-nmap <silent> <leader>md :Repl http://localhost/
-" mnemonic is MozRepl Development
-
 " Don't create netrw history file
 let g:netrw_dirhistmax=0
 
