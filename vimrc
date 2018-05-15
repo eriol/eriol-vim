@@ -1,8 +1,6 @@
 " Personal .vimrc file"
 " Daniele Tricoli <eriol@mornie.org>
 
-set nocompatible
-
 call plug#begin('~/.vim/plugged')
 
 Plug 'sheerun/vim-polyglot'
