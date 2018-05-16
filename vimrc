@@ -59,7 +59,6 @@ Plug 'xolox/vim-session'
 
 call plug#end()
 
-
 colorscheme molokai
 
 set autochdir
@@ -112,12 +111,14 @@ map <silent> <PageUp> 1000<C-U>
 map <silent> <PageDown> 1000<C-D>
 imap <silent> <PageUp> <C-O>1000<C-U>
 imap <silent> <PageDown> <C-O>1000<C-D>
+
 nnoremap <C-w>s <C-w>s<C-w>w
 nnoremap <C-w>v <C-w>v<C-w>w
-nnoremap <F9> :silent update<Bar>silent !xdg-open %:p &<CR>
-noremap <F10> :set list!<CR>
-noremap <F11> :set number!<CR>
+
 nnoremap <T-F1> :if &go=~#'m'<Bar>set go-=m<Bar>else<Bar>set go+=m<Bar>endif<CR>
+nnoremap <T-F9> :silent update<Bar>silent !xdg-open %:p &<CR>
+noremap <T-F10> :set list!<CR>
+noremap <T-F11> :set number!<CR>
 
 let python_highlight_all = 1
 set wildignore+=*.pyc
