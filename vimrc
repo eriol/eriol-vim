@@ -98,7 +98,7 @@ Plug 'tpope/vim-unimpaired'
 Plug 'vim-airline/vim-airline'
     let g:airline_powerline_fonts = 1
 Plug 'vim-airline/vim-airline-themes'
-Plug 'xolox/vim-session' | Plug 'xolox/vim-misc'
+Plug 'xolox/vim-misc' | Plug 'xolox/vim-session'
     let g:session_autoload = 'no'
     let g:session_autosave = 'yes'
 
