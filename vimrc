@@ -33,6 +33,7 @@ Plug 'junegunn/fzf', {'dir': '~/.fzf', 'do': './install --all'} | Plug 'junegunn
     \ 'marker':  ['fg', 'Keyword'],
     \ 'spinner': ['fg', 'Label'],
     \ 'header':  ['fg', 'Comment'] }
+    let g:fzf_buffers_jump = 1
 
     " https://github.com/junegunn/fzf.vim/issues/47#issuecomment-160237795
     function! s:find_git_root()
@@ -40,7 +41,15 @@ Plug 'junegunn/fzf', {'dir': '~/.fzf', 'do': './install --all'} | Plug 'junegunn
     endfunction
     command! ProjectFiles execute 'Files' s:find_git_root()
 
+    command! -bang -nargs=* Rg
+    \ call fzf#vim#grep(
+    \   'rg --column --line-number --no-heading --color=always '.shellescape(<q-args>), 1,
+    \   <bang>0 ? fzf#vim#with_preview('up:60%')
+    \           : fzf#vim#with_preview('right:50%:hidden', '?'),
+    \   <bang>0)
+
     nmap <C-p> :ProjectFiles<cr>
+    nmap <C-s> :Rg<cr>
 Plug 'ludovicchabant/vim-gutentags'
     let g:gutentags_cache_dir = expand('~/.cache/ctags')
     let g:gutentags_add_default_project_roots = 0
