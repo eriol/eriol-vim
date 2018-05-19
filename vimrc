@@ -45,6 +45,7 @@ Plug 'nathanaelkane/vim-indent-guides'
     let g:indent_guides_guide_size = 1
 Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' }
     map <C-n> :NERDTreeToggle<CR>
+    let g:NERDTreeQuitOnOpen = 1
     let NERDTreeIgnore = ['\.pyc$']
 Plug 'scrooloose/syntastic'
     set statusline+=%#warningmsg#
