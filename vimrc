@@ -55,6 +55,10 @@ Plug 'ludovicchabant/vim-gutentags'
     let g:gutentags_add_default_project_roots = 0
     let g:gutentags_project_root = ['.git', '.hg', '.svn', 'Makefile']
 Plug 'moll/vim-bbye'
+Plug 'mileszs/ack.vim'
+    if executable('rg')
+        let g:ackprg = 'rg --vimgrep'
+    endif
 Plug 'nathanaelkane/vim-indent-guides'
     let g:indent_guides_enable_on_vim_startup = 1
     let g:indent_guides_start_level = 2
