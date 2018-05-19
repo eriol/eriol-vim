@@ -5,6 +5,9 @@ call plug#begin('~/.vim/plugged')
 
 Plug 'sheerun/vim-polyglot'
 
+" YouCompleteMe is being managed manually.
+Plug '~/.vim/plugged/YouCompleteMe'
+
 Plug 'Raimondi/delimitMate'
 Plug 'SirVer/ultisnips'
 Plug 'airblade/vim-gitgutter'
