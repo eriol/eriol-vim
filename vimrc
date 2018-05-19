@@ -58,6 +58,7 @@ Plug 'junegunn/fzf', {'dir': '~/.fzf', 'do': './install --all'} | Plug 'junegunn
     nmap <C-p> :ProjectFiles<CR>
     nmap <C-s> :Rg<CR>
     nmap ; :Buffers<CR>
+Plug 'luochen1990/rainbow', { 'on': 'RainbowToggle' }
 Plug 'ludovicchabant/vim-gutentags'
     let g:gutentags_cache_dir = expand('~/.cache/ctags')
     let g:gutentags_add_default_project_roots = 0
