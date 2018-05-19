@@ -52,22 +52,22 @@ Plug 'junegunn/fzf', {'dir': '~/.fzf', 'do': './install --all'} | Plug 'junegunn
     \           : fzf#vim#with_preview('right:50%:hidden', '?'),
     \   <bang>0)
 
-    nmap <C-p> :ProjectFiles<cr>
-    nmap <C-s> :Rg<cr>
-    nmap ; :Buffers<cr>
+    nmap <C-p> :ProjectFiles<CR>
+    nmap <C-s> :Rg<CR>
+    nmap ; :Buffers<CR>
 Plug 'ludovicchabant/vim-gutentags'
     let g:gutentags_cache_dir = expand('~/.cache/ctags')
     let g:gutentags_add_default_project_roots = 0
     let g:gutentags_project_root = ['.git', '.hg', '.svn', 'Makefile']
 Plug 'moll/vim-bbye'
     " delete current buffer without closing window
-    map gz :Bdelete<cr>
+    map gz :Bdelete<CR>
 Plug 'nathanaelkane/vim-indent-guides'
     let g:indent_guides_enable_on_vim_startup = 1
     let g:indent_guides_start_level = 2
     let g:indent_guides_guide_size = 1
 Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' }
-    map <C-n> :NERDTreeToggle<cr>
+    map <C-n> :NERDTreeToggle<CR>
     let g:NERDTreeQuitOnOpen = 1
     let NERDTreeIgnore = ['\.pyc$']
 Plug 'scrooloose/syntastic'
@@ -88,7 +88,7 @@ Plug 'scrooloose/syntastic'
     let g:syntastic_cpp_compiler_options = ' -std=c++11'
     let g:syntastic_go_checkers = ['go', 'golint', 'govet', 'errcheck']
 Plug 'sjl/gundo.vim'
-    nnoremap <F5> :GundoToggle<cr>
+    nnoremap <F5> :GundoToggle<CR>
     let g:gundo_prefer_python3 = 1
 Plug 'tomasr/molokai'
 Plug 'tomtom/tcomment_vim'
