@@ -1,6 +1,9 @@
 " Personal .vimrc file
 " Daniele Tricoli <eriol@mornie.org>
 
+let mapleader = ","
+let maplocalleader = ","
+
 call plug#begin('~/.vim/plugged')
 
 Plug 'sheerun/vim-polyglot'
