@@ -20,7 +20,7 @@ Plug 'jlanzarotta/bufexplorer'
 Plug 'jmcantrell/vim-virtualenv'
 Plug 'junegunn/fzf', {'dir': '~/.fzf', 'do': './install --all'} | Plug 'junegunn/fzf.vim'
     let g:fzf_colors =
-    \ { 'fg':      ['fg', 'Normal'],
+    \ { 'fg':    ['fg', 'Normal'],
     \ 'bg':      ['bg', 'Normal'],
     \ 'hl':      ['fg', 'Comment'],
     \ 'fg+':     ['fg', 'CursorLine', 'CursorColumn', 'Normal'],
@@ -55,12 +55,14 @@ Plug 'ludovicchabant/vim-gutentags'
     let g:gutentags_add_default_project_roots = 0
     let g:gutentags_project_root = ['.git', '.hg', '.svn', 'Makefile']
 Plug 'moll/vim-bbye'
+    " delete current buffer without closing window
+    map gz :Bdelete<cr>
 Plug 'nathanaelkane/vim-indent-guides'
     let g:indent_guides_enable_on_vim_startup = 1
     let g:indent_guides_start_level = 2
     let g:indent_guides_guide_size = 1
 Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' }
-    map <C-n> :NERDTreeToggle<CR>
+    map <C-n> :NERDTreeToggle<cr>
     let g:NERDTreeQuitOnOpen = 1
     let NERDTreeIgnore = ['\.pyc$']
 Plug 'scrooloose/syntastic'
@@ -81,7 +83,7 @@ Plug 'scrooloose/syntastic'
     let g:syntastic_cpp_compiler_options = ' -std=c++11'
     let g:syntastic_go_checkers = ['go', 'golint', 'govet', 'errcheck']
 Plug 'sjl/gundo.vim'
-    nnoremap <F5> :GundoToggle<CR>
+    nnoremap <F5> :GundoToggle<cr>
     let g:gundo_prefer_python3 = 1
 Plug 'tomasr/molokai'
 Plug 'tomtom/tcomment_vim'
@@ -141,8 +143,6 @@ endif
 
 " Tab
 nmap <A-n> :tabnew<CR>
-" gz in command mode closes the current buffer
-map gz :Bdelete<CR>
 " `Ctrl-L` to clear the highlighting
 nnoremap <silent> <C-L> :nohlsearch<CR><C-L>
 " fix broken Page Up/Down
