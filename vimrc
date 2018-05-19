@@ -14,6 +14,7 @@ Plug 'ervandew/supertab'
 Plug 'fatih/vim-go'
     let g:go_disable_autoinstall = 1
     let g:go_fmt_command = "goimports"
+Plug 'fcpg/vim-spotlightify'
 Plug 'godlygeek/tabular'
 Plug 'jlanzarotta/bufexplorer'
     map <A-j> <ESC>:BufExplorer<CR>
