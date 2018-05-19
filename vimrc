@@ -8,7 +8,6 @@ Plug 'sheerun/vim-polyglot'
 Plug 'Raimondi/delimitMate'
 Plug 'SirVer/ultisnips'
 Plug 'airblade/vim-gitgutter'
-Plug 'ctrlpvim/ctrlp.vim'
 Plug 'davidhalter/jedi-vim'
     let g:jedi#show_call_signatures = 0
 Plug 'ervandew/supertab'
@@ -34,6 +33,7 @@ Plug 'junegunn/fzf', {'dir': '~/.fzf', 'do': './install --all'} | Plug 'junegunn
     \ 'marker':  ['fg', 'Keyword'],
     \ 'spinner': ['fg', 'Label'],
     \ 'header':  ['fg', 'Comment'] }
+    nmap <C-p> :Files<cr>
 Plug 'ludovicchabant/vim-gutentags'
     let g:gutentags_cache_dir = expand('~/.cache/ctags')
     let g:gutentags_add_default_project_roots = 0
