@@ -86,8 +86,8 @@ colorscheme molokai
 set autochdir
 set autoindent
 set autoread
-set colorcolumn=80
 set backspace=indent,eol,start
+set colorcolumn=80
 set encoding=utf-8
 set expandtab
 set ff=unix
@@ -108,6 +108,7 @@ set showcmd
 set softtabstop=4
 set tabstop=4
 set visualbell t_vb=
+set wildignore+=*.pyc
 set wrap
 
 " Resize splits on windows size changes
@@ -143,7 +144,6 @@ noremap <T-F10> :set list!<CR>
 noremap <T-F11> :set number!<CR>
 
 let python_highlight_all = 1
-set wildignore+=*.pyc
 augroup Python
   au!
   au FileType python set autoindent cindent et sts=4 sw=4 tw=80 fo=croq
