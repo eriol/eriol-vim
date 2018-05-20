@@ -120,6 +120,7 @@ set autoindent
 set autoread
 set backspace=indent,eol,start
 set colorcolumn=80
+set completeopt-=preview
 set encoding=utf-8
 set expandtab
 set ff=unix
