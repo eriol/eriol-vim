@@ -98,6 +98,7 @@ Plug 'scrooloose/syntastic'
 Plug 'sjl/gundo.vim'
     nnoremap <F5> :GundoToggle<CR>
     let g:gundo_prefer_python3 = 1
+Plug 'ajh17/spacegray.vim'
 Plug 'tomasr/molokai'
 Plug 'tomtom/tcomment_vim'
 Plug 'tpope/vim-fugitive'
