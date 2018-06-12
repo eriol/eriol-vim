@@ -100,6 +100,7 @@ Plug 'sjl/gundo.vim'
     let g:gundo_prefer_python3 = 1
 Plug 'ajh17/spacegray.vim'
 Plug 'cocopon/iceberg.vim'
+Plug 'mitsuhiko/fruity-vim-colorscheme'
 Plug 'tomasr/molokai'
 Plug 'tomtom/tcomment_vim'
 Plug 'tpope/vim-fugitive'
