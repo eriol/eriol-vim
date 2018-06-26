@@ -13,6 +13,7 @@ Plug '~/.vim/plugged/YouCompleteMe'
     let g:ycm_key_list_select_completion = ['<C-n>', '<Down>']
     let g:ycm_key_list_previous_completion = ['<C-p>', '<Up>']
 
+Plug 'mhinz/vim-startify'
 Plug 'Raimondi/delimitMate'
 Plug 'SirVer/ultisnips'
     let g:UltiSnipsExpandTrigger = "<tab>"
