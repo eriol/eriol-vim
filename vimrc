@@ -196,6 +196,14 @@ augroup python_files
     autocmd FileType python setlocal textwidth=80 formatoptions=croqj
 augroup END
 
+augroup c_cpp_files
+    autocmd!
+    autocmd FileType c setlocal expandtab softtabstop=4 shiftwidth=4 tabstop=4
+    autocmd FileType c setlocal commentstring=/*\ %s\ */
+    autocmd FileType cpp setlocal expandtab softtabstop=4 shiftwidth=4 tabstop=4
+    autocmd FileType cpp setlocal commentstring=//\ %s
+augroup END
+
 " rst support
 augroup rst_files
     autocmd!
