@@ -126,7 +126,6 @@ call plug#end()
 
 colorscheme molokai
 
-set autochdir
 set autoindent
 set autoread
 set backspace=indent,eol,start
@@ -161,6 +160,9 @@ au VimResized * exe "normal! \<c-w>="
 if version >= 702
     autocmd BufWinLeave * call clearmatches()
 endif
+
+" Go to the directory of the current open file only for the current window.
+nnoremap <leader>lcd :lcd %:p:h<CR>:pwd<CR>
 
 """"""""""""""""""
 " Keybindings    "
