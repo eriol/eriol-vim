@@ -116,6 +116,8 @@ Plug 'tpope/vim-repeat'
 Plug 'tpope/vim-surround'
 Plug 'tpope/vim-unimpaired'
 Plug 'vim-airline/vim-airline'
+    let g:airline_right_sep = ''
+    let g:airline_left_sep = ''
     let g:airline_powerline_fonts = 1
 Plug 'vim-airline/vim-airline-themes'
 Plug 'xolox/vim-misc' | Plug 'xolox/vim-session'
