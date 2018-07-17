@@ -111,6 +111,7 @@ Plug 'mitsuhiko/fruity-vim-colorscheme'
 Plug 'tomasr/molokai'
 Plug 'tpope/vim-commentary'
     noremap <C-_> :Commentary<CR>
+    inoremap <C-_> <ESC>:Commentary<CR>li
 Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-repeat'
 Plug 'tpope/vim-surround'
