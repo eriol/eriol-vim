@@ -109,6 +109,7 @@ Plug 'ajh17/spacegray.vim'
 Plug 'cocopon/iceberg.vim'
 Plug 'mitsuhiko/fruity-vim-colorscheme'
 Plug 'tomasr/molokai'
+Plug 'NLKNguyen/papercolor-theme'
 Plug 'tpope/vim-commentary'
     noremap <C-_> :Commentary<CR>
     inoremap <C-_> <ESC>:Commentary<CR>li
