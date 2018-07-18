@@ -90,7 +90,8 @@ Plug 'nathanaelkane/vim-indent-guides'
 Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' }
     map <C-n> :NERDTreeToggle<CR>
     let g:NERDTreeQuitOnOpen = 1
-    let NERDTreeIgnore = ['\.pyc$']
+    let g:NERDTreeMinimalUI = 1
+    let g:NERDTreeIgnore = ['\.pyc$']
 Plug 'scrooloose/syntastic'
     set statusline+=%#warningmsg#
     set statusline+=%{SyntasticStatuslineFlag()}
