@@ -244,3 +244,8 @@ augroup markup_files
     autocmd FileType xml,html,htmljinja,htmldjango setlocal expandtab softtabstop=2
         \ shiftwidth=2 tabstop=2
 augroup END
+
+augroup go_files
+    autocmd!
+    autocmd FileType go setlocal textwidth=80 formatoptions=croqj
+augroup END
