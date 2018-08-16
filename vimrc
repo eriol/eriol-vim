@@ -220,38 +220,3 @@ noremap <T-F11> :set number!<CR>
 
 " Don't create netrw history file
 let g:netrw_dirhistmax=0
-
-" python support
-let python_highlight_all = 1
-augroup python_files
-    autocmd!
-    autocmd FileType python setlocal expandtab softtabstop=4 shiftwidth=4 tabstop=8
-    autocmd FileType python setlocal textwidth=80 formatoptions=croqj
-augroup END
-
-augroup c_cpp_files
-    autocmd!
-    autocmd FileType c setlocal expandtab softtabstop=4 shiftwidth=4 tabstop=4
-    autocmd FileType c setlocal commentstring=/*\ %s\ */
-    autocmd FileType cpp setlocal expandtab softtabstop=4 shiftwidth=4 tabstop=4
-    autocmd FileType cpp setlocal commentstring=//\ %s
-augroup END
-
-" rst support
-augroup rst_files
-    autocmd!
-    autocmd FileType rst setlocal expandtab softtabstop=4 shiftwidth=4 tabstop=4
-    autocmd FileType rst setlocal textwidth=80 formatoptions=croqj
-augroup END
-
-" markup language support
-augroup markup_files
-    autocmd!
-    autocmd FileType xml,html,htmljinja,htmldjango setlocal expandtab softtabstop=2
-        \ shiftwidth=2 tabstop=2
-augroup END
-
-augroup go_files
-    autocmd!
-    autocmd FileType go setlocal textwidth=80 formatoptions=croqj
-augroup END
