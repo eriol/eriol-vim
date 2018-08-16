@@ -180,10 +180,16 @@ set wildignore+=*.pyc
 set wrap
 
 " Resize splits on windows size changes
-au VimResized * exe "normal! \<c-w>="
+augroup ResizeSplits
+    autocmd!
+    autocmd VimResized * exe "normal! \<c-w>="
+augroup END
 
 if version >= 702
-    autocmd BufWinLeave * call clearmatches()
+    augroup ClearMarches
+        autocmd!
+        autocmd BufWinLeave * call clearmatches()
+    augroup END
 endif
 
 " Go to the directory of the current open file only for the current window.
