@@ -184,6 +184,8 @@ augroup ResizeSplits
     autocmd!
     autocmd VimResized * exe "normal! \<c-w>="
 augroup END
+" Use a better vertical separator for splits.
+set fillchars+=vert:│
 
 if version >= 702
     augroup ClearMarches
@@ -199,11 +201,11 @@ nnoremap <leader>lcd :lcd %:p:h<CR>:pwd<CR>
 " Keybindings    "
 """"""""""""""""""
 
-" Tab
+" Tab.
 nmap <A-n> :tabnew<CR>
-" `Ctrl-L` to clear the highlighting
+" `Ctrl-L` to clear the highlighting.
 nnoremap <silent> <C-L> :nohlsearch<CR><C-L>
-" fix broken Page Up/Down
+" Fix broken Page Up/Down.
 " http://vimrc-dissection.blogspot.com/2009/02/fixing-pageup-and-pagedown.html
 map <silent> <PageUp> 1000<C-U>
 map <silent> <PageDown> 1000<C-D>
@@ -218,5 +220,5 @@ nnoremap <T-F9> :silent update<Bar>silent !xdg-open %:p &<CR>
 noremap <T-F10> :set list!<CR>
 noremap <T-F11> :set number!<CR>
 
-" Don't create netrw history file
+" Don't create netrw history file.
 let g:netrw_dirhistmax=0
