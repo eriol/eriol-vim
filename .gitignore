@@ -1,5 +1,8 @@
 autoload/
 plugged/
+session/
 sessions/
 syntax/
+
 *.pyc
+vimrc.local
