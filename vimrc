@@ -222,3 +222,5 @@ noremap <T-F11> :set number!<CR>
 
 " Don't create netrw history file.
 let g:netrw_dirhistmax=0
+
+runtime vimrc.local
