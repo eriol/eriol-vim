@@ -8,7 +8,7 @@ call plug#begin('~/.vim/plugged')
 
 Plug 'sheerun/vim-polyglot'
 
-" YouCompleteMe is being managed manually.
+" YouCompleteMe is managed manually.
 Plug '~/.vim/plugged/YouCompleteMe'
     let g:ycm_key_list_select_completion = ['<C-n>', '<Down>']
     let g:ycm_key_list_previous_completion = ['<C-p>', '<Up>']
@@ -24,6 +24,7 @@ Plug 'davidhalter/jedi-vim'
     let g:jedi#show_call_signatures = 0
 Plug 'ervandew/supertab'
     let g:SuperTabDefaultCompletionType = '<C-n>'
+Plug 'rust-lang/rust.vim'
 Plug 'fatih/vim-go'
     let g:go_disable_autoinstall = 1
     let g:go_fmt_command = "goimports"
