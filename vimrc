@@ -25,6 +25,7 @@ Plug 'davidhalter/jedi-vim'
 Plug 'ervandew/supertab'
     let g:SuperTabDefaultCompletionType = '<C-n>'
 Plug 'rust-lang/rust.vim'
+    let g:rustfmt_autosave = 1
 Plug 'fatih/vim-go'
     let g:go_disable_autoinstall = 1
     let g:go_fmt_command = "goimports"
