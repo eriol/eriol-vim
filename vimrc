@@ -27,6 +27,7 @@ Plug 'ervandew/supertab'
 Plug 'rust-lang/rust.vim'
     let g:rustfmt_autosave_if_config_present = 1
 Plug 'racer-rust/vim-racer'
+    let g:racer_experimental_completer = 1
 Plug 'fatih/vim-go'
     let g:go_disable_autoinstall = 1
     let g:go_fmt_command = "goimports"
