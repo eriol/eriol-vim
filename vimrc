@@ -145,9 +145,6 @@ Plug 'vim-airline/vim-airline'
         \ 't'  : 'T',
         \ }
 Plug 'vim-airline/vim-airline-themes'
-Plug 'xolox/vim-misc' | Plug 'xolox/vim-session'
-    let g:session_autoload = 'no'
-    let g:session_autosave = 'yes'
 
 call plug#end()
 
