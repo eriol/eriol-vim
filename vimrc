@@ -6,7 +6,6 @@ let maplocalleader = ","
 
 call plug#begin('~/.vim/plugged')
 
-Plug 'sheerun/vim-polyglot'
 
 " YouCompleteMe is managed manually.
 Plug '~/.vim/plugged/YouCompleteMe'
@@ -147,6 +146,8 @@ Plug 'vim-airline/vim-airline'
         \ 't'  : 'T',
         \ }
 Plug 'vim-airline/vim-airline-themes'
+
+Plug 'sheerun/vim-polyglot'
 
 call plug#end()
 
