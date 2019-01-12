@@ -131,11 +131,12 @@ Plug 'sheerun/vim-polyglot'
     let g:polyglot_disabled = ['go', 'rust']
 
 " Colors
+Plug 'NLKNguyen/papercolor-theme'
 Plug 'ajh17/spacegray.vim'
 Plug 'cocopon/iceberg.vim'
 Plug 'mitsuhiko/fruity-vim-colorscheme'
+Plug 'morhetz/gruvbox'
 Plug 'tomasr/molokai'
-Plug 'NLKNguyen/papercolor-theme'
 
 call plug#end()
 
