@@ -94,23 +94,10 @@ Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' }
     let g:NERDTreeQuitOnOpen = 1
     let g:NERDTreeMinimalUI = 1
     let g:NERDTreeIgnore = ['\.pyc$']
-Plug 'scrooloose/syntastic'
-    set statusline+=%#warningmsg#
-    set statusline+=%{SyntasticStatuslineFlag()}
-    set statusline+=%*
-    let g:syntastic_always_populate_loc_list = 1
-    " let g:syntastic_auto_loc_list = 1
-    let g:syntastic_check_on_open = 1
-    let g:syntastic_check_on_wq = 0
-    let g:syntastic_error_symbol = '✗'
-    let g:syntastic_warning_symbol = '⚠'
-    let g:syntastic_style_error_symbol = '⚡'
-    let g:syntastic_style_warning_symbol = '⚡'
-    let g:syntastic_python_checkers = ['python', 'flake8']
-    " Use C++11 as default: add a .syntastic_cpp_config for projects
-    " not using C++11
-    let g:syntastic_cpp_compiler_options = ' -std=c++11'
-    let g:syntastic_go_checkers = ['go', 'golint', 'govet', 'errcheck']
+Plug 'w0rp/ale'
+    let g:airline#extensions#ale#enabled = 1
+    let g:ale_sign_warning = '🅧'
+    let g:ale_sign_error = '🅧'
 Plug 'sjl/gundo.vim'
     nnoremap <F5> :GundoToggle<CR>
     let g:gundo_prefer_python3 = 1
