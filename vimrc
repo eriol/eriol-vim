@@ -136,6 +136,7 @@ Plug 'ajh17/spacegray.vim'
 Plug 'cocopon/iceberg.vim'
 Plug 'mitsuhiko/fruity-vim-colorscheme'
 Plug 'morhetz/gruvbox'
+    let g:gruvbox_contrast_dark = 'hard'
 Plug 'tomasr/molokai'
 
 call plug#end()
