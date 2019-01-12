@@ -4,6 +4,8 @@ VIM_PLUG_DIR=plugged
 VIM_PLUG='https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim'
 
 install: download_vim_plug
+	rm -f ~/.vim
+	ln -s `pwd` ~/.vim
 
 setup_directories:
 	mkdir -p ${AUTOLOAD_DIR} ${VIM_PLUG_DIR}
