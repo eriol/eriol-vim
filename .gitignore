@@ -3,6 +3,7 @@ plugged/
 session/
 sessions/
 syntax/
+view/
 
 *.pyc
 vimrc.local
