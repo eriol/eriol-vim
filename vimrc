@@ -6,7 +6,6 @@ let maplocalleader = ","
 
 call plug#begin('~/.vim/plugged')
 
-
 " YouCompleteMe is managed manually.
 Plug '~/.vim/plugged/YouCompleteMe'
     let g:ycm_key_list_select_completion = ['<C-n>', '<Down>']
@@ -146,8 +145,8 @@ Plug 'vim-airline/vim-airline'
         \ 't'  : 'T',
         \ }
 Plug 'vim-airline/vim-airline-themes'
-
 Plug 'sheerun/vim-polyglot'
+    let g:polyglot_disabled = ['go', 'rust']
 
 call plug#end()
 
