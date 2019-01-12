@@ -212,3 +212,4 @@ noremap <T-F11> :set number!<CR>
 let g:netrw_dirhistmax=0
 
 runtime vimrc.local
+runtime vimrc.last

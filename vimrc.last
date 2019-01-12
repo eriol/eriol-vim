@@ -1,0 +1,2 @@
+highlight ALEErrorSign ctermfg=9 guifg=#C30500
+highlight ALEWarningSign ctermfg=11 guifg=#ED6237
