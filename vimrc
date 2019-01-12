@@ -101,11 +101,6 @@ Plug 'w0rp/ale'
 Plug 'sjl/gundo.vim'
     nnoremap <F5> :GundoToggle<CR>
     let g:gundo_prefer_python3 = 1
-Plug 'ajh17/spacegray.vim'
-Plug 'cocopon/iceberg.vim'
-Plug 'mitsuhiko/fruity-vim-colorscheme'
-Plug 'tomasr/molokai'
-Plug 'NLKNguyen/papercolor-theme'
 Plug 'tpope/vim-commentary'
     noremap <C-_> :Commentary<CR>
     inoremap <C-_> <ESC>:Commentary<CR>li
@@ -134,6 +129,13 @@ Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'sheerun/vim-polyglot'
     let g:polyglot_disabled = ['go', 'rust']
+
+" Colors
+Plug 'ajh17/spacegray.vim'
+Plug 'cocopon/iceberg.vim'
+Plug 'mitsuhiko/fruity-vim-colorscheme'
+Plug 'tomasr/molokai'
+Plug 'NLKNguyen/papercolor-theme'
 
 call plug#end()
 
