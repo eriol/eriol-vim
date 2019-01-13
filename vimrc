@@ -104,9 +104,6 @@ Plug 'w0rp/ale'
     let b:ale_fixers = {'rust': ['']}
     nmap <silent> <C-k> <Plug>(ale_previous_wrap)
     nmap <silent> <C-j> <Plug>(ale_next_wrap)
-Plug 'sjl/gundo.vim'
-    nnoremap <F5> :GundoToggle<CR>
-    let g:gundo_prefer_python3 = 1
 Plug 'tpope/vim-commentary'
     noremap <C-_> :Commentary<CR>
     inoremap <C-_> <ESC>:Commentary<CR>li
