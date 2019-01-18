@@ -159,6 +159,7 @@ set guioptions=aegit
 set history=1000
 set incsearch hlsearch
 set laststatus=2
+set lazyredraw
 set list
 set listchars=tab:▸\ ,trail:·,eol:¬,nbsp:␣
 set noerrorbells
