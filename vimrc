@@ -15,12 +15,28 @@ Plug 'SirVer/ultisnips'
 Plug 'airblade/vim-gitgutter'
 Plug 'davidhalter/jedi-vim'
     let g:jedi#show_call_signatures = 0
-Plug 'ervandew/supertab'
-    let g:SuperTabDefaultCompletionType = '<C-n>'
 Plug 'rust-lang/rust.vim'
     let g:rustfmt_autosave_if_config_present = 1
-Plug 'prabirshrestha/async.vim' | Plug 'prabirshrestha/vim-lsp'
-Plug 'prabirshrestha/asyncomplete.vim' | Plug 'prabirshrestha/asyncomplete-lsp.vim'
+Plug 'prabirshrestha/async.vim'
+Plug 'prabirshrestha/vim-lsp'
+Plug 'prabirshrestha/asyncomplete.vim'
+Plug 'prabirshrestha/asyncomplete-lsp.vim'
+Plug 'yami-beta/asyncomplete-omni.vim'
+Plug 'prabirshrestha/asyncomplete-buffer.vim'
+    " let g:lsp_log_verbose = 1
+    " let g:lsp_log_file = expand('~/.vim' . '/lsp.log')
+    " let g:asyncomplete_log_file = expand('~/.vim' . '/asyncomplete.log')
+    let g:asyncomplete_force_refresh_on_context_changed = 1
+    let g:asyncomplete_auto_popup = has('nvim') ? 1 : 0
+    let g:asyncomplete_smart_completion = 0
+    let g:asyncomplete_remove_duplicates = 1
+    inoremap <expr> <Tab> pumvisible() ? "\<C-n>" : "\<Tab>"
+    inoremap <expr> <S-Tab> pumvisible() ? "\<C-p>" : "\<S-Tab>"
+    inoremap <expr> <cr> pumvisible() ? "\<C-y>" : "\<cr>"
+    imap <c-space> <Plug>(asyncomplete_force_refresh)
+    autocmd! CompleteDone * if pumvisible() == 0 | pclose | endif
+    nnoremap <silent> <leader>ca :LspCodeAction<CR>
+
     if executable('rls')
         au User lsp_setup call lsp#register_server({
             \ 'name': 'rls',
@@ -28,6 +44,18 @@ Plug 'prabirshrestha/asyncomplete.vim' | Plug 'prabirshrestha/asyncomplete-lsp.v
             \ 'whitelist': ['rust'],
             \ })
     endif
+
+    au User asyncomplete_setup call asyncomplete#register_source(asyncomplete#sources#omni#get_source_options({
+        \ 'name': 'omni',
+        \ 'whitelist': ['*'],
+        \ 'completor': function('asyncomplete#sources#omni#completor'),
+        \ }))
+
+    au User asyncomplete_setup call asyncomplete#register_source(asyncomplete#sources#buffer#get_source_options({
+      \ 'name': 'buffer',
+      \ 'whitelist': ['*'],
+      \ 'completor': function('asyncomplete#sources#buffer#completor'),
+      \ }))
 Plug 'racer-rust/vim-racer'
     let g:racer_experimental_completer = 1
 Plug 'fatih/vim-go'
@@ -156,7 +184,7 @@ set autoindent
 set autoread
 set backspace=indent,eol,start
 set colorcolumn=80
-set completeopt-=preview
+set completeopt=menu,noinsert,noselect
 set encoding=utf-8
 set expandtab
 set ff=unix
