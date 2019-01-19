@@ -6,11 +6,6 @@ let maplocalleader = ","
 
 call plug#begin('~/.vim/plugged')
 
-" YouCompleteMe is managed manually.
-Plug '~/.vim/plugged/YouCompleteMe'
-    let g:ycm_key_list_select_completion = ['<C-n>', '<Down>']
-    let g:ycm_key_list_previous_completion = ['<C-p>', '<Up>']
-
 Plug 'mhinz/vim-startify'
 Plug 'Raimondi/delimitMate'
 Plug 'SirVer/ultisnips'
@@ -24,6 +19,15 @@ Plug 'ervandew/supertab'
     let g:SuperTabDefaultCompletionType = '<C-n>'
 Plug 'rust-lang/rust.vim'
     let g:rustfmt_autosave_if_config_present = 1
+Plug 'prabirshrestha/async.vim' | Plug 'prabirshrestha/vim-lsp'
+Plug 'prabirshrestha/asyncomplete.vim' | Plug 'prabirshrestha/asyncomplete-lsp.vim'
+    if executable('rls')
+        au User lsp_setup call lsp#register_server({
+            \ 'name': 'rls',
+            \ 'cmd': {server_info->['rustup', 'run', 'nightly', 'rls']},
+            \ 'whitelist': ['rust'],
+            \ })
+    endif
 Plug 'racer-rust/vim-racer'
     let g:racer_experimental_completer = 1
 Plug 'fatih/vim-go'
@@ -101,7 +105,9 @@ Plug 'w0rp/ale'
     let g:ale_echo_msg_error_str = 'E'
     let g:ale_echo_msg_warning_str = 'W'
     let g:ale_echo_msg_format = '[%linter%] %s [%severity%]'
+    let b:ale_linters = {'rust': ['rls','cargo','rustc']}
     let b:ale_fixers = {'rust': ['']}
+    let g:ale_completion_enabled = 1
     nmap <silent> <C-k> <Plug>(ale_previous_wrap)
     nmap <silent> <C-j> <Plug>(ale_next_wrap)
 Plug 'tpope/vim-commentary'
