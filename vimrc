@@ -143,7 +143,6 @@ Plug 'w0rp/ale'
     let g:ale_echo_msg_format = '[%linter%] %s [%severity%]'
     let b:ale_linters = {'rust': ['rls','cargo','rustc']}
     let b:ale_fixers = {'rust': ['']}
-    let g:ale_completion_enabled = 1
     nmap <silent> <C-k> <Plug>(ale_previous_wrap)
     nmap <silent> <C-j> <Plug>(ale_next_wrap)
 Plug 'tpope/vim-commentary'
