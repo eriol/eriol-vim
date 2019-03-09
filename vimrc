@@ -19,6 +19,7 @@ Plug 'rust-lang/rust.vim'
     let g:rustfmt_autosave_if_config_present = 1
 Plug 'prabirshrestha/async.vim'
 Plug 'prabirshrestha/vim-lsp'
+    let g:lsp_diagnostics_enabled = 0
 Plug 'prabirshrestha/asyncomplete.vim'
 Plug 'prabirshrestha/asyncomplete-lsp.vim'
 Plug 'yami-beta/asyncomplete-omni.vim'
