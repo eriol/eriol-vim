@@ -176,6 +176,7 @@ Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'sheerun/vim-polyglot'
     let g:polyglot_disabled = ['go', 'rust']
+Plug 'Chiel92/vim-autoformat'
 
 " Colors
 Plug 'NLKNguyen/papercolor-theme'
