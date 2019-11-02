@@ -15,7 +15,6 @@ Plug 'SirVer/ultisnips'
 Plug 'airblade/vim-gitgutter'
 Plug 'davidhalter/jedi-vim'
     let g:jedi#show_call_signatures = 0
-Plug 'psf/black'
 Plug 'rust-lang/rust.vim'
     let g:rustfmt_autosave_if_config_present = 1
 Plug 'prabirshrestha/async.vim'
