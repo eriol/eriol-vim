@@ -1,5 +1,9 @@
 let python_highlight_all = 1
 
+if executable('black')
+    let &l:formatprg = 'black --quiet -'
+endif
+
 setlocal expandtab
 setlocal formatoptions=croqj
 setlocal shiftwidth=4
