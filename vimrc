@@ -13,6 +13,8 @@ Plug 'SirVer/ultisnips'
     let g:UltiSnipsJumpForwardTrigger = "<tab>"
     let g:UltiSnipsJumpBackwardTrigger = "<s-tab>"
 Plug 'airblade/vim-gitgutter'
+Plug 'Konfekt/FastFold'
+Plug 'kalekundert/vim-coiled-snake'
 Plug 'davidhalter/jedi-vim'
     let g:jedi#show_call_signatures = 0
 Plug 'rust-lang/rust.vim'
