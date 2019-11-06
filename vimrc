@@ -210,6 +210,7 @@ set lazyredraw
 set list
 set listchars=tab:▸\ ,trail:·,eol:¬,nbsp:␣
 set noerrorbells
+set nofoldenable
 set nostartofline
 set ruler
 set shiftwidth=4
