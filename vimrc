@@ -204,8 +204,7 @@ Plug 'w0rp/ale'
     let g:ale_echo_msg_error_str = 'E'
     let g:ale_echo_msg_warning_str = 'W'
     let g:ale_echo_msg_format = '[%linter%] %s [%severity%]'
-    let b:ale_linters = {'rust': ['rls','cargo','rustc']}
-    let b:ale_fixers = {'rust': ['']}
+    let g:ale_fix_on_save = 1
     nmap <silent> <C-k> <Plug>(ale_previous_wrap)
     nmap <silent> <C-j> <Plug>(ale_next_wrap)
 Plug 'tpope/vim-commentary'
@@ -237,7 +236,6 @@ Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'sheerun/vim-polyglot'
     let g:polyglot_disabled = ['go', 'rust']
-Plug 'Chiel92/vim-autoformat'
 
 " Colors
 Plug 'NLKNguyen/papercolor-theme'
@@ -255,7 +253,7 @@ colorscheme molokai
 set autoindent
 set autoread
 set backspace=indent,eol,start
-set cmdheight=2
+" set cmdheight=2
 set colorcolumn=80
 set completeopt=menu,noinsert,noselect
 set encoding=utf-8
