@@ -281,6 +281,7 @@ set showcmd
 set signcolumn=yes
 set softtabstop=4
 set tabstop=4
+set textwidth=80
 set updatetime=300
 set visualbell t_vb=
 set wildignore+=*.pyc
