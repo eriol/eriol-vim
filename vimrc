@@ -168,9 +168,6 @@ Plug 'neoclide/coc.nvim', {'branch': 'release'}
     " use `:OR` for organize import of current buffer
     command! -nargs=0 OR   :call     CocAction('runCommand', 'editor.action.organizeImport')
 
-    " Add status line support, for integration with other plugin, checkout `:h coc-status`
-    set statusline^=%{coc#status()}%{get(b:,'coc_current_function','')}
-
     " Using CocList
     " Show all diagnostics
     nnoremap <silent> <space>a  :<C-u>CocList diagnostics<cr>
@@ -317,12 +314,6 @@ nnoremap <leader>lcd :lcd %:p:h<CR>:pwd<CR>
 nmap <A-n> :tabnew<CR>
 " `Ctrl-L` to clear the highlighting.
 nnoremap <silent> <C-L> :nohlsearch<CR><C-L>
-" Fix broken Page Up/Down.
-" http://vimrc-dissection.blogspot.com/2009/02/fixing-pageup-and-pagedown.html
-map <silent> <PageUp> 1000<C-U>
-map <silent> <PageDown> 1000<C-D>
-imap <silent> <PageUp> <C-O>1000<C-U>
-imap <silent> <PageDown> <C-O>1000<C-D>
 
 nnoremap <C-w>s <C-w>s<C-w>w
 nnoremap <C-w>v <C-w>v<C-w>w
