@@ -13,6 +13,7 @@ Plug 'SirVer/ultisnips'
     let g:UltiSnipsJumpForwardTrigger = "<tab>"
     let g:UltiSnipsJumpBackwardTrigger = "<s-tab>"
 Plug 'airblade/vim-gitgutter'
+Plug 'editorconfig/editorconfig-vim'
 Plug 'Konfekt/FastFold'
 Plug 'kalekundert/vim-coiled-snake'
 Plug 'davidhalter/jedi-vim'
