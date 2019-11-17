@@ -186,6 +186,9 @@ Plug 'neoclide/coc.nvim', {'branch': 'release'}
     nnoremap <silent> <space>k  :<C-u>CocPrev<CR>
     " Resume latest coc list
     nnoremap <silent> <space>p  :<C-u>CocListResume<CR>
+
+    " Extensions
+    let g:coc_global_extensions = ['coc-snippets']
 Plug 'moll/vim-bbye'
     " delete current buffer without closing window
     map gz :Bdelete<CR>
