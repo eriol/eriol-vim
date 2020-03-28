@@ -8,6 +8,7 @@ call plug#begin('~/.vim/plugged')
 
 Plug 'mhinz/vim-startify'
 Plug 'Raimondi/delimitMate'
+Plug 'andymass/vim-matchup'
 Plug 'airblade/vim-gitgutter'
 Plug 'editorconfig/editorconfig-vim'
 Plug 'Konfekt/FastFold'
