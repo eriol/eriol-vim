@@ -292,7 +292,7 @@ set tabstop=4
 set textwidth=80
 set updatetime=300
 set visualbell t_vb=
-set wildignore+=*.pyc
+set wildignore+=*.py[co],*/__pycache__/
 set wrap
 
 " Resize splits on windows size changes
