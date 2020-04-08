@@ -201,10 +201,6 @@ Plug 'nathanaelkane/vim-indent-guides'
     let g:indent_guides_start_level = 2
     let g:indent_guides_guide_size = 1
 Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' }
-    map <C-n> :NERDTreeToggle<CR>
-    let g:NERDTreeQuitOnOpen = 1
-    let g:NERDTreeMinimalUI = 1
-    let g:NERDTreeIgnore = ['\.pyc$']
 Plug 'w0rp/ale'
     let g:airline#extensions#ale#enabled = 1
     let g:ale_sign_warning = '🅧'
