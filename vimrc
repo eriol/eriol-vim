@@ -15,10 +15,6 @@ Plug 'Konfekt/FastFold'
 Plug 'kalekundert/vim-coiled-snake'
 Plug 'davidhalter/jedi-vim'
 Plug 'pearofducks/ansible-vim'
-    let g:ansible_extra_keywords_highlight = 1
-    let g:ansible_name_highlight = 'b'
-    let g:ansible_unindent_after_newline = 1
-    let g:ansible_yamlKeyName = 'yamlKey'
 Plug 'rust-lang/rust.vim'
     let g:rustfmt_autosave_if_config_present = 1
 Plug 'racer-rust/vim-racer'
