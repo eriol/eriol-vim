@@ -14,7 +14,6 @@ Plug 'editorconfig/editorconfig-vim'
 Plug 'Konfekt/FastFold'
 Plug 'kalekundert/vim-coiled-snake'
 Plug 'davidhalter/jedi-vim'
-    let g:jedi#show_call_signatures = 0
 Plug 'pearofducks/ansible-vim'
     let g:ansible_extra_keywords_highlight = 1
     let g:ansible_name_highlight = 'b'
