@@ -23,8 +23,6 @@ Plug 'jlanzarotta/bufexplorer'
 Plug 'jmcantrell/vim-virtualenv'
 Plug 'junegunn/fzf', {'dir': '~/.fzf', 'do': './install --all'} | Plug 'junegunn/fzf.vim'
 Plug 'luochen1990/rainbow', { 'on': 'RainbowToggle' }
-    let g:rainbow_active = 0
-    nmap <leader>r :RainbowToggle<CR>
 Plug 'ludovicchabant/vim-gutentags'
     let g:gutentags_cache_dir = expand('~/.cache/ctags')
     let g:gutentags_add_default_project_roots = 0
