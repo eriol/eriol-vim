@@ -16,8 +16,6 @@ Plug 'kalekundert/vim-coiled-snake'
 Plug 'davidhalter/jedi-vim'
 Plug 'pearofducks/ansible-vim'
 Plug 'rust-lang/rust.vim'
-Plug 'racer-rust/vim-racer'
-    let g:racer_experimental_completer = 1
 Plug 'fatih/vim-go'
 Plug 'fcpg/vim-spotlightify'
 Plug 'godlygeek/tabular'
