@@ -25,7 +25,6 @@ Plug 'junegunn/fzf', {'dir': '~/.fzf', 'do': './install --all'} | Plug 'junegunn
 Plug 'luochen1990/rainbow', { 'on': 'RainbowToggle' }
 Plug 'ludovicchabant/vim-gutentags'
 Plug 'majutsushi/tagbar', { 'on': 'TagbarToggle' }
-    nnoremap <silent> <leader>tt :TagbarToggle<CR>
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
     " Use tab for trigger completion with characters ahead and navigate.
     " Use command ':verbose imap <tab>' to make sure tab is not mapped by other plugin.
