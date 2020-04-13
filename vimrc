@@ -28,9 +28,8 @@ Plug 'majutsushi/tagbar', { 'on': 'TagbarToggle' }
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'moll/vim-bbye'
 Plug 'nathanaelkane/vim-indent-guides'
+    " This can't be moved.
     let g:indent_guides_enable_on_vim_startup = 1
-    let g:indent_guides_start_level = 2
-    let g:indent_guides_guide_size = 1
 Plug 'preservim/nerdtree', { 'on':  'NERDTreeToggle' }
 Plug 'w0rp/ale'
     let g:airline#extensions#ale#enabled = 1
