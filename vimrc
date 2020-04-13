@@ -33,8 +33,6 @@ Plug 'nathanaelkane/vim-indent-guides'
 Plug 'preservim/nerdtree', { 'on':  'NERDTreeToggle' }
 Plug 'dense-analysis/ale'
 Plug 'tpope/vim-commentary'
-    noremap <C-_> :Commentary<CR>
-    inoremap <C-_> <ESC>:Commentary<CR>li
 Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-repeat'
 Plug 'tpope/vim-surround'
