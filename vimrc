@@ -31,7 +31,7 @@ Plug 'nathanaelkane/vim-indent-guides'
     " This can't be moved.
     let g:indent_guides_enable_on_vim_startup = 1
 Plug 'preservim/nerdtree', { 'on':  'NERDTreeToggle' }
-Plug 'w0rp/ale'
+Plug 'dense-analysis/ale'
     let g:airline#extensions#ale#enabled = 1
     let g:ale_sign_warning = '🅧'
     let g:ale_sign_error = '🅧'
