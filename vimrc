@@ -39,23 +39,6 @@ Plug 'tpope/vim-surround'
 Plug 'tpope/vim-unimpaired'
 Plug 'Lokaltog/vim-easymotion'
 Plug 'vim-airline/vim-airline'
-    let g:airline_right_sep = ''
-    let g:airline_left_sep = ''
-    let g:airline_powerline_fonts = 1
-    let g:airline_mode_map = {
-        \ '__' : '-',
-        \ 'n'  : 'N',
-        \ 'i'  : 'I',
-        \ 'R'  : 'R',
-        \ 'c'  : 'C',
-        \ 'v'  : 'V',
-        \ 'V'  : 'V',
-        \ '' : 'V',
-        \ 's'  : 'S',
-        \ 'S'  : 'S',
-        \ '' : 'S',
-        \ 't'  : 'T',
-        \ }
 Plug 'vim-airline/vim-airline-themes'
 Plug 'sheerun/vim-polyglot'
     let g:polyglot_disabled = ['go', 'rust']
@@ -70,6 +53,8 @@ Plug 'morhetz/gruvbox'
 Plug 'tomasr/molokai'
 
 call plug#end()
+
+runtime! conf.d/*.vim
 
 colorscheme molokai
 
