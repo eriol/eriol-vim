@@ -39,6 +39,7 @@ Plug 'Lokaltog/vim-easymotion'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'sheerun/vim-polyglot'
+Plug 'embear/vim-localvimrc'
 
 " Colors
 Plug 'NLKNguyen/papercolor-theme'
