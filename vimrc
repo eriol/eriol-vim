@@ -4,6 +4,8 @@
 let mapleader = ","
 let maplocalleader = ","
 
+runtime! conf.d/before/*.vim
+
 call plug#begin('~/.vim/plugged')
 
 Plug 'mhinz/vim-startify'
@@ -52,7 +54,7 @@ Plug 'tomasr/molokai'
 
 call plug#end()
 
-runtime! conf.d/*.vim
+runtime! conf.d/after/*.vim
 
 colorscheme molokai
 
