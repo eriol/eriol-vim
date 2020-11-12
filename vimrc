@@ -124,8 +124,6 @@ nnoremap <leader>lcd :lcd %:p:h<CR>:pwd<CR>
 " Keybindings    "
 """"""""""""""""""
 
-" Tab.
-nmap <A-n> :tabnew<CR>
 " `Ctrl-L` to clear the highlighting.
 nnoremap <silent> <C-L> :nohlsearch<CR><C-L>
 " Fix broken Page Up/Down.
