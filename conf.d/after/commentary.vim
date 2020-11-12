@@ -1,2 +1,2 @@
-noremap <A-_> :Commentary<CR>
-inoremap <A-_> <ESC>:Commentary<CR>li
+noremap <C-_> :Commentary<CR>
+inoremap <C-_> <ESC>:Commentary<CR>li
