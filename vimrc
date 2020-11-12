@@ -69,8 +69,6 @@ set completeopt=menu,noinsert,noselect
 set encoding=utf-8
 set expandtab
 set ff=unix
-set guifont=Hack
-set guioptions=aegit
 set hidden
 set history=1000
 set incsearch hlsearch
@@ -96,6 +94,11 @@ set updatetime=300
 set visualbell t_vb=
 set wildignore+=*.py[co],*/__pycache__/
 set wrap
+
+if has("gui_running")
+    set guifont=Hack
+    set guioptions=aegit
+endif
 
 " Resize splits on windows size changes
 augroup ResizeSplits
