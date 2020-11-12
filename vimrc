@@ -136,11 +136,6 @@ imap <silent> <PageDown> <C-O>1000<C-D>
 nnoremap <C-w>s <C-w>s<C-w>w
 nnoremap <C-w>v <C-w>v<C-w>w
 
-nnoremap <T-F1> :if &go=~#'m'<Bar>set go-=m<Bar>else<Bar>set go+=m<Bar>endif<CR>
-nnoremap <T-F9> :silent update<Bar>silent !xdg-open %:p &<CR>
-noremap <T-F10> :set list!<CR>
-noremap <T-F11> :set number!<CR>
-
 " Don't create netrw history file.
 let g:netrw_dirhistmax=0
 
