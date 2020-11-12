@@ -76,6 +76,7 @@ set laststatus=2
 set lazyredraw
 set list
 set listchars=tab:▸\ ,trail:·,eol:¬,nbsp:␣
+set mouse=a
 set nobackup
 set noerrorbells
 set nofoldenable
@@ -90,6 +91,7 @@ set signcolumn=yes
 set softtabstop=4
 set tabstop=4
 set textwidth=80
+set ttymouse=sgr
 set updatetime=300
 set visualbell t_vb=
 set wildignore+=*.py[co],*/__pycache__/
