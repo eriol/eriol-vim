@@ -109,10 +109,10 @@ augroup ResizeSplits
     autocmd VimResized * exe "normal! \<c-w>="
 augroup END
 
-augroup CursorLine
-    autocmd!
-    autocmd InsertEnter,InsertLeave * set cursorline!
-augroup END
+" augroup CursorLine
+"     autocmd!
+"     autocmd InsertEnter,InsertLeave * set cursorline!
+" augroup END
 
 " Use a better vertical separator for splits.
 set fillchars+=vert:│
