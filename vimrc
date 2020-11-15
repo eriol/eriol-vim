@@ -87,7 +87,7 @@ set shiftwidth=4
 set shortmess+=Ic
 set showbreak=↪
 set showcmd
-set signcolumn=yes
+set signcolumn=number
 set softtabstop=4
 set tabstop=4
 set textwidth=80
