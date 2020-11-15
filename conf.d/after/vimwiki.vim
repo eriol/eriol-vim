@@ -6,4 +6,5 @@ let wiki.syntax = 'markdown'
 let wiki.ext = '.md'
 let wiki.automatic_nested_syntaxes = 1
 
+let g:vimwiki_global_ext=0
 let g:vimwiki_list = [wiki]
