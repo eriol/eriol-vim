@@ -108,4 +108,4 @@ nnoremap <silent> <space>k  :<C-u>CocPrev<CR>
 nnoremap <silent> <space>p  :<C-u>CocListResume<CR>
 
 " Extensions
-let g:coc_global_extensions = ['coc-css', 'coc-rls', 'coc-snippets']
+let g:coc_global_extensions = ['coc-css', 'coc-rust-analyzer', 'coc-snippets']
