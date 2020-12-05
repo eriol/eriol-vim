@@ -24,7 +24,6 @@ Plug 'fatih/vim-go'
 Plug 'stevearc/vim-arduino'
 Plug 'fcpg/vim-spotlightify'
 Plug 'godlygeek/tabular'
-Plug 'jlanzarotta/bufexplorer'
 Plug 'jmcantrell/vim-virtualenv'
 Plug 'junegunn/fzf', {'dir': '~/.fzf', 'do': './install --all'} | Plug 'junegunn/fzf.vim'
 Plug 'luochen1990/rainbow', { 'on': 'RainbowToggle' }
