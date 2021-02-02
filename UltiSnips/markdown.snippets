@@ -1,0 +1,10 @@
+snippet zolan "Create a new zola entry" b
++++
+draft = true
+date = `date --rfc-3339=seconds`
+title = "$1"
+[taxonomies]
+tags = ["$2"]
++++
+$0
+endsnippet
