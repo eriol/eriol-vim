@@ -14,17 +14,20 @@ let g:fzf_colors =
 \ 'header':  ['fg', 'Comment'] }
 let g:fzf_buffers_jump = 1
 
-" https://github.com/junegunn/fzf.vim/issues/47#issuecomment-160237795
-function! s:find_git_root()
-    return system('git rev-parse --show-toplevel 2> /dev/null')[:-2]
+function! ProjectFiles()
+    let is_under_git_control = system('git rev-parse')
+    if v:shell_error != 0
+        :Files
+    else
+        :GitFiles --exclude-standard --cached --others
+    endif
 endfunction
-command! ProjectFiles execute 'Files' s:find_git_root()
 
 command! -bang -nargs=* Rg
 \ call fzf#vim#grep(
 \   'rg --column --line-number --no-heading --color=always --smart-case -- '.shellescape(<q-args>), 1,
 \   fzf#vim#with_preview(), <bang>0)
 
-nmap <C-p> :ProjectFiles<CR>
+nmap <C-p> :call ProjectFiles()<CR>
 nmap <C-s> :Rg<CR>
 nmap ; :Buffers<CR>
