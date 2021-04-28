@@ -7,4 +7,4 @@ if executable('black')
     let &l:formatprg = 'black --quiet -'
 endif
 
-let b:ale_fixers = ['black']
+let b:ale_fixers = ['black', 'isort']
